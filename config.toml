@@ -1,7 +1,7 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "Jiafei Li"
-theme = "cactus"
+theme = "jiafei_cactus"
 
 [[menu.main]]
 name = "Home"
