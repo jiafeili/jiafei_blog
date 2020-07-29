@@ -53,4 +53,4 @@ weight = 4
   [params.comments]
     enabled = true # default
     engine = "disqus" # more supported engines will be added.
-    disqusShortname = "jiafeili"
+    disqusShortname = "jiafeili-github"
