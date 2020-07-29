@@ -1,4 +1,4 @@
-baseURL = "http://jiafeili.netlify.app"
+baseURL = "https://jiafeili.netlify.app"
 languageCode = "en-us"
 title = "Jiafei Li"
 theme = "jiafei_cactus"
