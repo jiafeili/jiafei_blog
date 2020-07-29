@@ -1,37 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>thoughts on Jiafei Li</title>
-    <link>http://example.org/tags/thoughts/</link>
-    <description>Recent content in thoughts on Jiafei Li</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 12 Apr 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://example.org/tags/thoughts/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>最危险的写作工具</title>
-      <link>http://example.org/posts/2020-04-12-dangerousapp/</link>
-      <pubDate>Sun, 12 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://example.org/posts/2020-04-12-dangerousapp/</guid>
-      <description>最近发现了一个写作网站，简直是帮助写文章的利器。这个网站的名字取得非常贴切，叫做“the most dangerous writing app”，翻译过来也就是“最危险的写作工具”。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>thoughts on Jiafei Li</title><link>http://example.org/tags/thoughts/</link><description>Recent content in thoughts on Jiafei Li</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 12 Apr 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://example.org/tags/thoughts/index.xml" rel="self" type="application/rss+xml"/><item><title>最危险的写作工具</title><link>http://example.org/posts/2020-04-12-dangerousapp/</link><pubDate>Sun, 12 Apr 2020 00:00:00 +0000</pubDate><guid>http://example.org/posts/2020-04-12-dangerousapp/</guid><description>最近发现了一个写作网站，简直是帮助写文章的利器。这个网站的名字取得非常贴切，叫做“the most dangerous writing app”，翻译过来也就是“最危险的写作工具”。
 它的运作机制是这样的：提前设定好一段写作时长（比如10分钟），然后这个网站就会提供一个文档编辑器让你在上面开始写作，但是一旦5秒钟之内没有打字，网站就会把之前写的所有东西全部删除，而且没法恢复。这个机制就像一个定时启动的炸弹，让人神经紧张，但却也非常锻炼人的专注力，以及遣词造句的能力。我一开始用这个网站的时候，就经常因为纠结用哪个词、哪个字，险些让自己写的东西付之东流；到后面慢慢适应了，这样的烦恼倒也少了很多。当然不便之处还是有的，比如说打错字修改的时间，或者说想切换听的歌的时间，经常一不小心就逼近5秒，让人后背一阵发凉。说是“最危险的”写作工具，确实名不虚传。当然，帮人提高写作效率，倒也是真的。
 我不知道是不是每个人都是这样，不过对于我来说，有时候想写篇文章缓解一下近来的压力，但总是因为过度字斟句酌，最后把本该解压的写作活动变成让人压力更大的工作。这就好像平常生活中，有时候人总会过度地去计较自己的得失成败，可是这种态度或许会让人活得更累。倒不如“莫听穿林打叶声，何妨吟啸且徐行”——即使有时，那些“穿林打叶声”其实是自己的内心发出的。
-注：以上的文字是我在“危险写作网”上用10分钟写出来的。稍加润色，就可以直接发在这里了。</description>
-    </item>
-    
-    <item>
-      <title>人生去往何方</title>
-      <link>http://example.org/posts/2020-02-21-lifegoeswhere/</link>
-      <pubDate>Fri, 21 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://example.org/posts/2020-02-21-lifegoeswhere/</guid>
-      <description>最近看了美剧《毒枭：墨西哥》，没有上一季拍的好。不过第七集有个场景让我记忆颇深（剧透预警）。当时探员Walt想劝降小毒枭Acosta，不知怎的两人开始把酒聊起彼此的身世，还有种惺惺相惜的感觉。里面Walt说了句话，挺让人感慨：
- I guess that’s life, right? Sooner or later everything turns to shit, no matter how hard we try.
- 剧中的Walt算是个悲情的小人物。他弟弟吸毒时不幸丧命黑帮的枪口下，他在墨西哥查大毒枭Felix的案子也接连碰壁。查案的唯一线索就是这个小头目Acosta，可他没能保住Acosta的周全，让他死在了乱枪之中，线索尽失。Walt只能放手一搏，带队去机场查缴Felix空运的大批毒品。结果消息走漏，探员几乎全部牺牲，只有Walt苟活。最后，大毒枭Felix被逮捕，可Walt早已被调到了别的城市，在一份无聊的文职工作上消磨时间 —— 这个案子的结局已经和他没有关系了。
+注：以上的文字是我在“危险写作网”上用10分钟写出来的。稍加润色，就可以直接发在这里了。</description></item><item><title>人生去往何方</title><link>http://example.org/posts/2020-02-21-lifegoeswhere/</link><pubDate>Fri, 21 Feb 2020 00:00:00 +0000</pubDate><guid>http://example.org/posts/2020-02-21-lifegoeswhere/</guid><description>最近看了美剧《毒枭：墨西哥》，没有上一季拍的好。不过第七集有个场景让我记忆颇深（剧透预警）。当时探员Walt想劝降小毒枭Acosta，不知怎的两人开始把酒聊起彼此的身世，还有种惺惺相惜的感觉。里面Walt说了句话，挺让人感慨：
+I guess that’s life, right? Sooner or later everything turns to shit, no matter how hard we try.
+剧中的Walt算是个悲情的小人物。他弟弟吸毒时不幸丧命黑帮的枪口下，他在墨西哥查大毒枭Felix的案子也接连碰壁。查案的唯一线索就是这个小头目Acosta，可他没能保住Acosta的周全，让他死在了乱枪之中，线索尽失。Walt只能放手一搏，带队去机场查缴Felix空运的大批毒品。结果消息走漏，探员几乎全部牺牲，只有Walt苟活。最后，大毒枭Felix被逮捕，可Walt早已被调到了别的城市，在一份无聊的文职工作上消磨时间 —— 这个案子的结局已经和他没有关系了。
 整部剧看下来，可以说Walt是个平凡得不能再平凡的人，有时甚至算是个坏人。他毫无计谋可言，行动中问题不断，审讯犯人的时候毫无技巧，甚至为了得到证词，动用私刑砍掉人家的手指头。和上一季殉职的主角Kiki一样，他只是一个几乎不起眼的警员，并不是传统意义上的好莱坞英雄。也难怪他会发出本文开始的感叹——不管怎样尝试，生活都只会变得更难。
 当然，我们对生活也不能太消极。马叔（Jason Mraz）有首歌叫做 3 Things，写的是如何面对人生中的挫折。里面我喜欢的一句话是：『I design my future bright not by where my life has been』。即使过去的人生充满了坎坷，我们依然能努力改写自己的未来。所以像歌词说的，要『try, try, try again』—— 说不定哪一次就试成了呢？
 退一万步讲，即使永远不成功，也没关系，至少我们还可以学习如何更好地失败。话剧《等待戈多》的作者萨缪尔·贝克特有句名言，叫做『Fail Better』。《权利的游戏》中饰演小恶魔的 Peter Dinklage 就把这话当做自己的座右铭。他天生身体与众不同，适合他的角色少之又少，但他还是顶住所有的冷眼和歧视坚持了下来，或许靠的就是这句话的力量。
@@ -39,63 +11,26 @@
 李宗盛唱道，『越过山丘，才发现无人等候』。年轻的时候，总觉得山顶就是我们最终的目标。可到了山顶以后，还会发现远处有下一座山，又一座山，连绵不绝，无穷无尽&amp;hellip;&amp;hellip;生命这场旅途没有终点，我们的归宿或许是在某座山脚下安营扎寨，了却残生；或许是在挑战下一座山的中途体力不支，栽倒在地。可不管怎样，人生无需是一场悲剧，因为在途中我们看到过那么多的风景，认识过那么可爱的旅伴 —— 甚至在旅途某一刻，平凡如我们这样的人，也曾站在山巅，一览众山小。
 西方谚语说：『如果生活给你一个柠檬，就把它做成柠檬水』。酸涩如柠檬般的人生，也注定有它的意义。那么，『when everything turns to shit』，就在上面种一朵鲜花吧。张伯苓不是说过吗，『美丽的鲜花，不妨是由粪水浇出来的』。话糙了点，道理是对的。
 最后，如果一切尝试都不起作用，就给人生一点时间吧。再蹉跎的岁月，过几年再看，只会觉得『回首向来萧瑟处，归去，也无风雨也无晴』。对自己温柔一点，就像毛不易在《小王》里唱的那样：
- 如果我在角落里遇见他 / 碰巧有乌云遮住天空啊 / 我会伸出还温热的手掌 / 告诉他明天会有多晴朗
- </description>
-    </item>
-    
-    <item>
-      <title>闲适感与效率</title>
-      <link>http://example.org/posts/2019-08-19-relax/</link>
-      <pubDate>Mon, 19 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://example.org/posts/2019-08-19-relax/</guid>
-      <description>我这人有个特点，那就是很难进入一种特别放松的状态。工作的时候自不必说，可即使是在休息的时候，我的神经也总是紧绷的。这种特点的副作用是让我的笑点变得很高。喜剧节目很少能让我感到快乐，反倒是运动或是家务这样耗费体力的事情，能让我感到一点久违的轻松——似乎只有当筋骨疲倦时，我的精神才能享受片刻的宁静与闲适。
+如果我在角落里遇见他 / 碰巧有乌云遮住天空啊 / 我会伸出还温热的手掌 / 告诉他明天会有多晴朗</description></item><item><title>闲适感与效率</title><link>http://example.org/posts/2019-08-19-relax/</link><pubDate>Mon, 19 Aug 2019 00:00:00 +0000</pubDate><guid>http://example.org/posts/2019-08-19-relax/</guid><description>我这人有个特点，那就是很难进入一种特别放松的状态。工作的时候自不必说，可即使是在休息的时候，我的神经也总是紧绷的。这种特点的副作用是让我的笑点变得很高。喜剧节目很少能让我感到快乐，反倒是运动或是家务这样耗费体力的事情，能让我感到一点久违的轻松——似乎只有当筋骨疲倦时，我的精神才能享受片刻的宁静与闲适。
 陶潜的“采菊东篱下，悠然见南山”似乎代表了闲适生活的极致，让我非常神往。但是这里其实有个矛盾，那就是生活是很难同时做到规律与闲适的。偶尔采菊东篱，抬头看到南山才能悠然；如果每天都重复相同的流程，再悠闲的生活也会难免落入一种乏味当中。必须具备了不确定性，生活才能充满意外与惊喜，人才能真正放松下来。
 这让我想起经济学家鲁宾斯坦的文章，里面谈到他喜欢咖啡馆里那种倦怠，闲散的氛围，没有计划，漫无目的，最适合做研究。这位老爷子是以色列人，不仅在经济学界建树颇丰，还写得一手好散文。读他的文章，就好像漫步在有着百年历史的特拉维夫街头。他自己写得好：
- Sometimes, as evening approaches, I pass by a Tel Aviv Café, see the regulars, with or without a laptop, alone or in a group, and look enviously at them. But then I remember that I am one of them. What a good feeling.
- 鲁宾斯坦对咖啡馆爱得深沉；不光在特拉维夫，全世界都可以找到他的足迹。在他的个人网站上，有一张世界地图，上面标满了他之前去过和以后想去的咖啡馆。每到一处，他一定会拍照记录，每过几年还会把这些照片整理印刷成海报，发给他的学生和同事。
+Sometimes, as evening approaches, I pass by a Tel Aviv Café, see the regulars, with or without a laptop, alone or in a group, and look enviously at them. But then I remember that I am one of them. What a good feeling.
+鲁宾斯坦对咖啡馆爱得深沉；不光在特拉维夫，全世界都可以找到他的足迹。在他的个人网站上，有一张世界地图，上面标满了他之前去过和以后想去的咖啡馆。每到一处，他一定会拍照记录，每过几年还会把这些照片整理印刷成海报，发给他的学生和同事。
 2019年的海报,鲁宾斯坦去过的咖啡馆
 说来幸运，这份海报我也得到了一张。收到以后，我赶紧给老爷子发邮件致谢，顺便推荐了芝加哥一家不错的咖啡馆。没想到鲁宾斯坦回了邮件，还说下次有机会去看看——让我十分惊喜。说来也挺感慨的，大学的时候最喜欢的博弈论课上，用的就是鲁老爷子的教材。那课我学得不错，好像还拿了A+；只可惜后来转了方向，没有继续在博弈论上深造下去，也算是一个小小的遗憾。
-时间过得真快，大学毕业都已经是那么久以前的事情了。这个世界匆匆忙忙地运转，效率成为了一切的衡量标准，人们连停下来喘口气都成为了奢侈。在这样的时代中，咖啡馆成为了一种奇妙的空间，允许人们在白天也能享受夜晚的安静与从容。说也奇怪，身处这样闲适的环境，我们才能充满效率地工作——人类真是矛盾的综合体。</description>
-    </item>
-    
-    <item>
-      <title>债各有主</title>
-      <link>http://example.org/posts/2019-07-23-debt/</link>
-      <pubDate>Tue, 23 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://example.org/posts/2019-07-23-debt/</guid>
-      <description>前几天看一则新闻，说全球债务总额今年已上升至246.5万亿美元，约占世界GDP的320%。其中，美国69万亿，中国40万亿，其他如欧元区，日本，英国等地区也贡献了不少，见下表。
+时间过得真快，大学毕业都已经是那么久以前的事情了。这个世界匆匆忙忙地运转，效率成为了一切的衡量标准，人们连停下来喘口气都成为了奢侈。在这样的时代中，咖啡馆成为了一种奇妙的空间，允许人们在白天也能享受夜晚的安静与从容。说也奇怪，身处这样闲适的环境，我们才能充满效率地工作——人类真是矛盾的综合体。</description></item><item><title>债各有主</title><link>http://example.org/posts/2019-07-23-debt/</link><pubDate>Tue, 23 Jul 2019 00:00:00 +0000</pubDate><guid>http://example.org/posts/2019-07-23-debt/</guid><description>前几天看一则新闻，说全球债务总额今年已上升至246.5万亿美元，约占世界GDP的320%。其中，美国69万亿，中国40万亿，其他如欧元区，日本，英国等地区也贡献了不少，见下表。
 说实话，『全球债务总额』这个概念，我不是很理解。假如某天我和朋友喝多了胡扯，我向甲随手借了10万亿，甲向乙也借10万亿，乙又向我借10万亿，那我们仨其实是互不相欠的。可要换成新闻里的算法，这屋里的『债务总额』瞬间就成了30万亿；论美元的话，跟中美GDP加起来差不多。一顿小酒，让我和路人甲乙瞬间成为了世界上欠债最多的仨人。这让我不禁想起那个笑话，两个经济学家仅靠打赌，就创造了两个亿的GDP——只是在此就不便复述了。
 不过谈到债务，我还想起路透社前一阵的这篇报道。该报道称，中国2019年1季度的债务总额已经超过了GDP的303%，而去年同期仅有297%。作者在文中还不忘提醒读者，2季度中国GDP增速仅有6.2%，是27年来最低水平。而报道的最后一句可称经典：
- Chinese officials have said repeatedly said debt risks are manageable overall.
- 这句话怎么连文法都不通畅？不是我的摘抄失误，的确是路透社的原文如此。抛开词句不谈，言外之意很明确了：瞧瞧吧各位看官，债务都占到GDP的303%了，中方官员居然还反复说没事，可见其水平之高下。当然，这纯属一派胡言。报道中只字未提的是，美国的债务总额已经达到了其GDP的338%，金额比中国超出30万亿（怎么又是30万亿）。美国的人口仅占世界的5%， 而债务已经达到了『全球债务总额』的28%。相比之下，中国的债务总额仅占全球的15-16%左右。按中国五分之一的人口来计算，这个比例似乎不算太高。
+Chinese officials have said repeatedly said debt risks are manageable overall.
+这句话怎么连文法都不通畅？不是我的摘抄失误，的确是路透社的原文如此。抛开词句不谈，言外之意很明确了：瞧瞧吧各位看官，债务都占到GDP的303%了，中方官员居然还反复说没事，可见其水平之高下。当然，这纯属一派胡言。报道中只字未提的是，美国的债务总额已经达到了其GDP的338%，金额比中国超出30万亿（怎么又是30万亿）。美国的人口仅占世界的5%， 而债务已经达到了『全球债务总额』的28%。相比之下，中国的债务总额仅占全球的15-16%左右。按中国五分之一的人口来计算，这个比例似乎不算太高。
 以上这些信息，出于某些原因，在一般的新闻中是很难找到的，除非是华盛顿邮报这样相对公立的媒体（只是相对）。即使去找报道中援引的数据来源，也只能找到一家私立的研究机构（ Institute of International Finance），其数据并不对外开放。IMF的 Global Debt Database 是我能找到的最好的替代品，但是时效性差了不少。总而言之，对于一个普通读者来说，想要真正去了解自己国家的债务状况，并不是一件容易的事情。
 7月22日，美国众议院通过法案，在未来两年内批准政府每年增加500亿美元的支出。目前的债务最高限额（debt ceilings）也被暂缓了。总统和国会又都可以高高兴兴地花钱了，反正债务已经累积如山，再加一点也无所谓。
 不过，毕竟债各有主，是债，就迟早要还的。
 更多阅读：
- Aaron Kuriloff on WSJ - Taking Stock of the World’s Debt （试着在图五找找美国。提示：找不到的。） Elizabeth Warren on Medium- The Coming Economic Crash — And How to Stop It David Leonhardt on NYT - The Next Debt Bombs  </description>
-    </item>
-    
-    <item>
-      <title>从菲利普斯曲线说开去</title>
-      <link>http://example.org/posts/2019-07-17-phillipscurve/</link>
-      <pubDate>Wed, 17 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://example.org/posts/2019-07-17-phillipscurve/</guid>
-      <description>菲利普斯曲线失效，算是经济学界大家心照不宣的一个秘密。芝大经济系每年有个传统，学生主办一场搞笑晚会，师生都来捧场。记得某年晚会，台上的学生戏谑道：『我的毕业论文研究的是菲利普斯曲线，所以大概没希望毕业了！』台下大笑。
+Aaron Kuriloff on WSJ - Taking Stock of the World’s Debt （试着在图五找找美国。提示：找不到的。） Elizabeth Warren on Medium- The Coming Economic Crash — And How to Stop It David Leonhardt on NYT - The Next Debt Bombs</description></item><item><title>从菲利普斯曲线说开去</title><link>http://example.org/posts/2019-07-17-phillipscurve/</link><pubDate>Wed, 17 Jul 2019 00:00:00 +0000</pubDate><guid>http://example.org/posts/2019-07-17-phillipscurve/</guid><description>菲利普斯曲线失效，算是经济学界大家心照不宣的一个秘密。芝大经济系每年有个传统，学生主办一场搞笑晚会，师生都来捧场。记得某年晚会，台上的学生戏谑道：『我的毕业论文研究的是菲利普斯曲线，所以大概没希望毕业了！』台下大笑。
 几天前，民主党女政客科尔特斯（简称AOC）和联储主席鲍威尔（简称P），针对菲利普斯曲线进行了一场颇具学术意味的交锋。时间有限，不翻译了，原文贴上：
- AOC: I’ve been seeing lately that economists are increasingly worried that the idea of a Phillips curve, that links unemployment and inflation, is no longer describing what is happening in today’s economy. What are your thoughts on that?
-P: Yes, very much so. We&amp;rsquo;ve spend a great deal of time on that. The connection between slack in the economy – the level of unemployment and inflation – was very strong if you go back 50 years and it’s gotten weaker and weaker and weaker to the point where it’s a faint heartbeat.</description>
-    </item>
-    
-    <item>
-      <title>你和你的研究</title>
-      <link>http://example.org/posts/2019-01-01-yourresearch/</link>
-      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://example.org/posts/2019-01-01-yourresearch/</guid>
-      <description>最近读了一篇演讲稿，叫做『你和你的研究』（You and your research）。演讲者是美国的数学家理查德·汉明。他曾经在美国贝尔实验室工作，负责提供计算机运算方面的技术帮助。在贝尔实验室工作的30年里，理查德见过不少著名的科学家，其中包括费曼，费米，奥本海默等人。而他这篇演讲稿的内容，就是讨论为什么这些科学家做出了卓越的成就，而其他人没有。
+AOC: I’ve been seeing lately that economists are increasingly worried that the idea of a Phillips curve, that links unemployment and inflation, is no longer describing what is happening in today’s economy. What are your thoughts on that?
+P: Yes, very much so. We&amp;rsquo;ve spend a great deal of time on that. The connection between slack in the economy – the level of unemployment and inflation – was very strong if you go back 50 years and it’s gotten weaker and weaker and weaker to the point where it’s a faint heartbeat.</description></item><item><title>你和你的研究</title><link>http://example.org/posts/2019-01-01-yourresearch/</link><pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate><guid>http://example.org/posts/2019-01-01-yourresearch/</guid><description>最近读了一篇演讲稿，叫做『你和你的研究』（You and your research）。演讲者是美国的数学家理查德·汉明。他曾经在美国贝尔实验室工作，负责提供计算机运算方面的技术帮助。在贝尔实验室工作的30年里，理查德见过不少著名的科学家，其中包括费曼，费米，奥本海默等人。而他这篇演讲稿的内容，就是讨论为什么这些科学家做出了卓越的成就，而其他人没有。
 演讲稿很长，如果您想看的话，建议挑一个空闲的时间，一口气读完，这样的感受最好。对我来说，最大的感触有以下几点，简单和大家交流一下。
 努力 很多人认为学术上面的成功是运气使然。但是就像生物学家巴斯德说的，『机会总是留给准备好的人』。实际上，作为一个研究者，每天坚持不懈地学习是非常重要的。我们每天投入的每一分努力，都会像滚雪球一样，根据复利增长的规律不断累计。我们拥有的知识越多，就能以更快的速度学习新知识，也有机会和更优秀的人交流，拥有更广阔的平台，等等。从这个角度看，每天的学习虽然让人觉得枯燥，但是从长远来看，会让一个学者从众多资质相似的人当中脱颖而出。
 专注 如果想做出重要的研究，我们经常需要灵感，而灵感来源于潜意识。如何能加快灵感产生的速度？从常规的角度来看，这似乎是不可能完成的任务，毕竟潜意识是我们无法控制的。可是，这篇演讲当中提供了一种新的思路。当一个人完全沉浸于某个问题的时候，假以时日之后，他的潜意识也会妥协，开始去和他一起思考这个问题——因为没有什么别的事情可做。我们经常说的『日有所思，夜有所梦』就是这样。凯库勒和苯环的故事，想必也不必赘述了。那达到这种状态的唯一手段，就是把全部的注意力都放在想要思考的问题上，忽视所有可能的干扰因素，让潜意识在不知不觉为你的研究提供新的想法与视角。
@@ -105,37 +40,24 @@ P: Yes, very much so. We&amp;rsquo;ve spend a great deal of time on that. The co
 忘记是谁说过：一篇高质量的论文和一篇低质量的论文，写起来花费的时间差不多。表达的是一个意思。
 尝试新领域 很多学者在一个领域获得了成就之后，会习惯呆在自己创造的舒适区中，用惯有的研究方法去研究新的问题。我们生活的这个世界瞬息万变，在之前的时代适用的研究方法，不一定也可以应用于新的时代。这就是为什么有一些著名的学者在获得了某些国际大奖之后，就没有什么新的贡献了。他们专注于自己擅长的领域和研究方法中，而没有去尝试在其他的领域做出突破。这篇演讲给出的药方比较特别，建议学者每七年应该换一个小领域，放弃之前的光环，从头做起，争取未来七年内在新的研究领域内做出贡献。这样，学者总会处在不断的改变之中，也能因此保持自己的创造力和好奇心。
 这就是我读这篇演讲的一些感想。建议在学术圈，或者准备进入学术圈的朋友，有空读一下这篇演讲稿的原文。如果愿意和我交流，也欢迎在下方留言。
-感谢阅读！</description>
-    </item>
-    
-    <item>
-      <title>逃离知乎</title>
-      <link>http://example.org/posts/2018-11-25-first-post/</link>
-      <pubDate>Sun, 25 Nov 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://example.org/posts/2018-11-25-first-post/</guid>
-      <description>最近几个月，我在网络上有点沉默。
+感谢阅读！</description></item><item><title>逃离知乎</title><link>http://example.org/posts/2018-11-25-first-post/</link><pubDate>Sun, 25 Nov 2018 00:00:00 +0000</pubDate><guid>http://example.org/posts/2018-11-25-first-post/</guid><description>最近几个月，我在网络上有点沉默。
 上一次在知乎写回答是四月份的事了。微博平常就不怎么用，上次更新动态应该是九月份。微信公众号也有大半年没写推送了。倒也不是多忙，就是没有很强的创作欲望。每次想打开网站写点东西，最后都把窗口默默地关了。
 现在中文互联网有个挺不好的趋势，就是信息的碎片化、泛娱乐化太过严重。原本我挺喜欢上知乎的，觉得它是个不错的问答平台。可最近半年，每次打开我的知乎时间线，我都会明显感觉到严肃的问题越来越少，无聊的问题越来越多。这对于我这种人来说简直是一种折磨。
 说真的，我对于了解
- 有什么事是外国人来了中国之后才知道的?
- 或者
- 如何评价《奇葩说》中李诞的表现？
- 没有一丝一毫的兴趣。重点是，这样的问题还层出不穷，让人防不胜防，逃无可逃。
+有什么事是外国人来了中国之后才知道的?
+或者
+如何评价《奇葩说》中李诞的表现？
+没有一丝一毫的兴趣。重点是，这样的问题还层出不穷，让人防不胜防，逃无可逃。
 一开始，我还在每一个这样的问题后面使劲点击『不感兴趣』，试图用我强烈的反感让时间线回归正常——就像一个在自家花园里努力除草的园丁。后来，我发现我的努力是徒劳的：杂草生长的速度太快，靠园丁的力量根本忙不过来。于是，我只好任由这些杂草生长，看着它们不断占据更多的空间，直到整个花园都被占领。
 事情的关键，在于知乎的『推荐』当中，不知道出于什么目的，集合了一些天底下最无聊的问题。这些问题像病毒一样蔓延到每个人的时间线当中去。你难免会关注一些大V，他们看到某些无趣的问题，为它们点了赞——完了，城门失火，殃及了我这条小小的，可怜的池鱼。
- 有人可能会问了，至于吗，不就是在时间线上出现了几个不想读的问题吗？不要点进去不就得了？
+有人可能会问了，至于吗，不就是在时间线上出现了几个不想读的问题吗？不要点进去不就得了？
 我要严肃地说：至于，而且特别、非常、极其至于。
 首先，对于阅读，我一贯秉承的态度是『食不厌精，脍不厌细』。毕竟，我们读到的书，接触到的想法，会直接影响我们看世界的角度。英语有句话让我们注意饮食，说『you are what you eat』。放在这个语境，也可以说『you are what you read』。每天阅读这些无聊的东西，久而久之，自己也会变得无聊透顶。说句实话，我不愿自己变成那种对明星八卦了如指掌，却对诗和远方一无所知的人。
 其次，对于任何信息，『信噪比』都是很重要的一个指标。举个例子说，时间线里偶尔出现一两个无聊的问题，无可厚非，无伤大雅。就像吃米饭的时候里面有一两粒沙子，挑出来就行了。可是现在的情况是，你端上来一碗沙子，里面只有一两粒米——这饭还让不让人吃了？
 当然，不可否认，有的人可能会喜欢这样的时间线。我很清楚，随着知乎用户群体不断扩大，这种趋势一定会越来越明显。可是，我不喜欢。好在，对于我这一个普通用户来说，我有用脚投票的权利。就像我不喜欢某家餐馆，下次不去就是了。
 当然，逃离知乎也没有说起来得那么容易，有时候看着自己不多不少的关注者，还有后台统计的总阅读量发呆，觉得自己似乎背负了某种责任，应该在平台持续地输出干货、带来正能量，等等等等&amp;hellip;
 但是我冷静下来之后，也想明白了。这种感觉，属于一种『崇高的幻觉』—— 是需要避免的。
- 电影《阿甘正传》里，阿甘从东海岸跑到西海岸，从西海岸又跑到东海岸，跑了好几次。为什么要跑呢？按他的话说，『I just feel like running』。跑的时间久了，他的身后多了不少追随者，大家跟从着他，把他作为人生的榜样。可是跑了三年多之后，阿甘突然停了下来。他说，我累了，想回家了（『I&amp;rsquo;m pretty tired. Think I&amp;rsquo;ll go home now.』）追随者们问：『现在我们应该做什么呢？』阿甘没有回答，只是顺着道路往回走，越走越远了。
+电影《阿甘正传》里，阿甘从东海岸跑到西海岸，从西海岸又跑到东海岸，跑了好几次。为什么要跑呢？按他的话说，『I just feel like running』。跑的时间久了，他的身后多了不少追随者，大家跟从着他，把他作为人生的榜样。可是跑了三年多之后，阿甘突然停了下来。他说，我累了，想回家了（『I&amp;rsquo;m pretty tired. Think I&amp;rsquo;ll go home now.』）追随者们问：『现在我们应该做什么呢？』阿甘没有回答，只是顺着道路往回走，越走越远了。
 几年前开始在知乎回答问题，也是因为类似的理由。I felt like writing。而现在，我累了，不想写了。
 以后会不会写，什么时候重新开始写，不好说。
-总之，以后有什么信息或动态，会更新在这个博客里面。感谢各位的阅读与支持。</description>
-    </item>
-    
-  </channel>
-</rss>
+总之，以后有什么信息或动态，会更新在这个博客里面。感谢各位的阅读与支持。</description></item></channel></rss>

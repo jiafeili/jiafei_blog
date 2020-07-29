@@ -1,33 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>huawei on Jiafei Li</title>
-    <link>http://example.org/tags/huawei/</link>
-    <description>Recent content in huawei on Jiafei Li</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 09 Dec 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://example.org/tags/huawei/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>关于孟晚舟的新闻梳理</title>
-      <link>http://example.org/posts/2018-12-09-arrest-cfo-2/</link>
-      <pubDate>Sun, 09 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://example.org/posts/2018-12-09-arrest-cfo-2/</guid>
-      <description>前几天发的文章《想做武林盟主，也要防好下三路》 里面提到了华为CFO孟晚舟在加拿大被捕的事情。周五孟的保释听证会之后，一些问题有了答案，但是更多细节尚未尘埃落定。在这里简单汇总一下。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>huawei on Jiafei Li</title><link>http://example.org/tags/huawei/</link><description>Recent content in huawei on Jiafei Li</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 09 Dec 2018 00:00:00 +0000</lastBuildDate><atom:link href="http://example.org/tags/huawei/index.xml" rel="self" type="application/rss+xml"/><item><title>关于孟晚舟的新闻梳理</title><link>http://example.org/posts/2018-12-09-arrest-cfo-2/</link><pubDate>Sun, 09 Dec 2018 00:00:00 +0000</pubDate><guid>http://example.org/posts/2018-12-09-arrest-cfo-2/</guid><description>前几天发的文章《想做武林盟主，也要防好下三路》 里面提到了华为CFO孟晚舟在加拿大被捕的事情。周五孟的保释听证会之后，一些问题有了答案，但是更多细节尚未尘埃落定。在这里简单汇总一下。
  1. 有传言孟晚舟持有加拿大护照和香港的身份证，那她的身份还是不是中国公民？ 外交部12月7日的记者会上，新闻发言人耿爽表示，按照《中华人民共和国国籍法》，孟晚舟是中国公民。（新闻来源） 2. 逮捕孟晚舟的是加拿大还是美国警方？加拿大政府事前是否知情？ 当地时间上周四（12月6日），加拿大总理特鲁多在电视讲话中对记者公开回应孟晚舟事件。特鲁多称，加拿大政府没有参与孟在温哥华机场被捕一事，只是在事件发生前几天得到通知，知道美方将要采取拘捕行动，并要求进行引渡。简而言之：加政府知情但未参与。（新闻来源） 3. 美国和加拿大凭什么在机场抓人？有没有合法的逮捕令？ 根据纽约时报的这篇报道，纽约东区的法院在8月22日对孟晚舟签发了逮捕令，一位加拿大法官在11月30日对孟晚舟签发了逮捕令。 4. 周五孟晚舟的听证会已经结束，孟晚舟能否被保释？ 在法律程序上来说，孟晚舟将在加拿大分别进行『保释听证会』和『引渡听证会』。周五的听证会属于『保释听证会』，争论的重点是孟晚舟在案件审理之前是否可以被保释出庭。注意保释不等于释放，而只是在案件审理阶段被授予部分的活动自由，依然不可以离开加拿大。
 针对孟是否应该被保释，有正反两方面的观点。检方提出反对保释的理由，是因为她拥有充足的社会资源和丰富的人脉，完全有能力在保释阶段逃回中国，而中国和加拿大或美国并没有签署引渡条款。孟的律师支持保释的理由，是考虑到本次事件的巨大影响力和孟本人的名誉，孟女士没有理由做出这种抹黑公司名誉，让自己父亲蒙羞的行为。况且她在加拿大有房产，丈夫也在加拿大，逃出加拿大的可能性不大。
 法官当庭没有做出保释判决，保释听证会将在下周一继续。
 （新闻来源） 5. 对孟晚舟的具体指控是什么？如果被判决有罪，孟将面临多久的刑期？ 据检方的说法，在2009年到2014年之间，华为通过一家香港公司Skycom Tech（以下简称Skycom）向伊朗出售了美国惠普公司生产的通信设备，违反了美国对伊朗的制裁条款。而美国的一些银行也帮助完成了Skycom对伊朗出售设备的交易，在『无意中』（inadvertently）违反了美国的对伊制裁。根据检方的说法，这些银行是孟『欺诈行为的受害者』。孟曾在一次会议中向某家金融机构的高管表示，华为在伊朗的所有商业活动都是遵从美国的制裁规定的，而且和Skycom只保持正常的商业往来，并未持有Skycom的股份。但根据检方的说法，Skycom实际上是华为的从属公司，Skycom的员工使用华为的邮箱地址，在邮件中也使用华为的logo和信件抬头。所以，孟的行为构成欺诈。
 如果上述指控成立，孟晚舟将面临30年的监禁。（新闻来源） 关于华为和Skycom的更多细节可以看路透社的这篇报道。 6. 中国政府有没有做出进一步的行动，比如对加拿大和美国施压？ 外交部副部长乐玉成在周日会见了美国驻华大使泰里·布兰斯塔德，对孟晚舟的逮捕提出强烈抗议，要求美方撤回逮捕令，否则会对根据美国的行动采取进一步的措施。之后，乐玉成紧急召见了加拿大驻华大使麦家廉，再次就孟晚舟事件提出强烈抗议。乐称如果加方不释放孟晚舟，『必将造成严重后果』，但未提及具体的后果是什么。(新闻来源)
 关于可能对加拿大施压的途径，加方提出了一些猜测。以下内容引自BBC中文网的报道：
- 加拿大不列颠哥伦比亚大学亚洲研究中心的中加关系专家保罗‧埃文斯（Paul Evans）对BBC表示，加拿大是迫不得已才被卷入中美贸易战的漩涡。中国有多个方法向加拿大施压，或会限制中国资金在加拿大的投资，特别是研究及发展费用。
+加拿大不列颠哥伦比亚大学亚洲研究中心的中加关系专家保罗‧埃文斯（Paul Evans）对BBC表示，加拿大是迫不得已才被卷入中美贸易战的漩涡。中国有多个方法向加拿大施压，或会限制中国资金在加拿大的投资，特别是研究及发展费用。
 前加拿大驻华大使马大维（David Mulroney）表示，中国和加拿大有可能冻结高层互访交流活动，两国自由贸易谈判亦可能受到影响。
-  目前就只有以上这些，等有了更多信息之后会继续更新。</description>
-    </item>
-    
-  </channel>
-</rss>
+ 目前就只有以上这些，等有了更多信息之后会继续更新。</description></item></channel></rss>
