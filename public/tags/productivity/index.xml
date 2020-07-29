@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>productivity on Jiafei Li</title>
+    <link>http://example.org/tags/productivity/</link>
+    <description>Recent content in productivity on Jiafei Li</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 19 Aug 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://example.org/tags/productivity/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>闲适感与效率</title>
+      <link>http://example.org/posts/2019-08-19-relax/</link>
+      <pubDate>Mon, 19 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2019-08-19-relax/</guid>
+      <description>我这人有个特点，那就是很难进入一种特别放松的状态。工作的时候自不必说，可即使是在休息的时候，我的神经也总是紧绷的。这种特点的副作用是让我的笑点变得很高。喜剧节目很少能让我感到快乐，反倒是运动或是家务这样耗费体力的事情，能让我感到一点久违的轻松——似乎只有当筋骨疲倦时，我的精神才能享受片刻的宁静与闲适。
+陶潜的“采菊东篱下，悠然见南山”似乎代表了闲适生活的极致，让我非常神往。但是这里其实有个矛盾，那就是生活是很难同时做到规律与闲适的。偶尔采菊东篱，抬头看到南山才能悠然；如果每天都重复相同的流程，再悠闲的生活也会难免落入一种乏味当中。必须具备了不确定性，生活才能充满意外与惊喜，人才能真正放松下来。
+这让我想起经济学家鲁宾斯坦的文章，里面谈到他喜欢咖啡馆里那种倦怠，闲散的氛围，没有计划，漫无目的，最适合做研究。这位老爷子是以色列人，不仅在经济学界建树颇丰，还写得一手好散文。读他的文章，就好像漫步在有着百年历史的特拉维夫街头。他自己写得好：
+ Sometimes, as evening approaches, I pass by a Tel Aviv Café, see the regulars, with or without a laptop, alone or in a group, and look enviously at them. But then I remember that I am one of them. What a good feeling.
+ 鲁宾斯坦对咖啡馆爱得深沉；不光在特拉维夫，全世界都可以找到他的足迹。在他的个人网站上，有一张世界地图，上面标满了他之前去过和以后想去的咖啡馆。每到一处，他一定会拍照记录，每过几年还会把这些照片整理印刷成海报，发给他的学生和同事。
+2019年的海报,鲁宾斯坦去过的咖啡馆
+说来幸运，这份海报我也得到了一张。收到以后，我赶紧给老爷子发邮件致谢，顺便推荐了芝加哥一家不错的咖啡馆。没想到鲁宾斯坦回了邮件，还说下次有机会去看看——让我十分惊喜。说来也挺感慨的，大学的时候最喜欢的博弈论课上，用的就是鲁老爷子的教材。那课我学得不错，好像还拿了A+；只可惜后来转了方向，没有继续在博弈论上深造下去，也算是一个小小的遗憾。
+时间过得真快，大学毕业都已经是那么久以前的事情了。这个世界匆匆忙忙地运转，效率成为了一切的衡量标准，人们连停下来喘口气都成为了奢侈。在这样的时代中，咖啡馆成为了一种奇妙的空间，允许人们在白天也能享受夜晚的安静与从容。说也奇怪，身处这样闲适的环境，我们才能充满效率地工作——人类真是矛盾的综合体。</description>
+    </item>
+    
+    <item>
+      <title>Calcurse--终端上的日程表管理工具</title>
+      <link>http://example.org/others/2018-12-22-calendar/</link>
+      <pubDate>Sat, 22 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/others/2018-12-22-calendar/</guid>
+      <description>我一般用 Google Calendar 做日程表管理。主要原因有两个：一个是跨平台同步比较方便；另一个是相比其他软件来说（比如苹果上的iCal）更加轻便快捷。去年从iPhone 换到了 Pixel 以后，在移动端也可以更方便地编辑日程表了，感觉非常开心。
+不过我其实一直在找一个在终端上的日程表管理工具，这样我在写代码的时候，如果需要看一下今天的计划，就不用切换到浏览器或者手机上了，不容易分心。今天有空认真找了一下，终于搞定了，在这里写篇日志分享一下。不知道有没有人和我一样，有这种奇特的需求。
+这个工具其实一直都有，叫做Calcurse。不知道为什么，它的界面对我来说有一种谜之美感：
+安装 Calcurse 本身的安装非常简单，按照下面几步：
+ 从官网上下载安装包。 解压缩安装包  Mac 的话，直接双击解压缩就好 Linux 先定位到下载目录，然后运行下面这些代码就可以了 $ tar zxvf calcurse-4.3.0.tar.gz $ cd calcurse-4.3.0 $ ./configure $ make $ make install    之后在终端输入calcurse 就可以进入到日程表了。  关于 calcurse 的更多指令，可以参考它的帮助文档。这里不多赘述。总而言之，我觉得它的使用界面还是非常友好的，只是快捷键有点多，需要记一下。熟悉了以后就会感觉顺手了。
+同步Google Calendar 稍微麻烦一点的是如何把 Google Calendar 上面的日程表条目同步到 calcurse。最新的 calcurse 版本（4.3.0）已经支持了这个功能。不过设置起来还是有点费事的。
+ 首先，如果没有 python 3 的话，安装一下。然后还需要安装 httplib2:  pip3 install --user httplib2   我们需要去 Google Developer Console 创建一个新的项目（Project）。我给它命名为&amp;quot;Calcurse&amp;rdquo;，不过实际上叫什么都好。</description>
+    </item>
+    
+  </channel>
+</rss>

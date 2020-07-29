@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>macroeconomics on Jiafei Li</title>
+    <link>http://example.org/tags/macroeconomics/</link>
+    <description>Recent content in macroeconomics on Jiafei Li</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 23 Jul 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://example.org/tags/macroeconomics/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>债各有主</title>
+      <link>http://example.org/posts/2019-07-23-debt/</link>
+      <pubDate>Tue, 23 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2019-07-23-debt/</guid>
+      <description>前几天看一则新闻，说全球债务总额今年已上升至246.5万亿美元，约占世界GDP的320%。其中，美国69万亿，中国40万亿，其他如欧元区，日本，英国等地区也贡献了不少，见下表。
+说实话，『全球债务总额』这个概念，我不是很理解。假如某天我和朋友喝多了胡扯，我向甲随手借了10万亿，甲向乙也借10万亿，乙又向我借10万亿，那我们仨其实是互不相欠的。可要换成新闻里的算法，这屋里的『债务总额』瞬间就成了30万亿；论美元的话，跟中美GDP加起来差不多。一顿小酒，让我和路人甲乙瞬间成为了世界上欠债最多的仨人。这让我不禁想起那个笑话，两个经济学家仅靠打赌，就创造了两个亿的GDP——只是在此就不便复述了。
+不过谈到债务，我还想起路透社前一阵的这篇报道。该报道称，中国2019年1季度的债务总额已经超过了GDP的303%，而去年同期仅有297%。作者在文中还不忘提醒读者，2季度中国GDP增速仅有6.2%，是27年来最低水平。而报道的最后一句可称经典：
+ Chinese officials have said repeatedly said debt risks are manageable overall.
+ 这句话怎么连文法都不通畅？不是我的摘抄失误，的确是路透社的原文如此。抛开词句不谈，言外之意很明确了：瞧瞧吧各位看官，债务都占到GDP的303%了，中方官员居然还反复说没事，可见其水平之高下。当然，这纯属一派胡言。报道中只字未提的是，美国的债务总额已经达到了其GDP的338%，金额比中国超出30万亿（怎么又是30万亿）。美国的人口仅占世界的5%， 而债务已经达到了『全球债务总额』的28%。相比之下，中国的债务总额仅占全球的15-16%左右。按中国五分之一的人口来计算，这个比例似乎不算太高。
+以上这些信息，出于某些原因，在一般的新闻中是很难找到的，除非是华盛顿邮报这样相对公立的媒体（只是相对）。即使去找报道中援引的数据来源，也只能找到一家私立的研究机构（ Institute of International Finance），其数据并不对外开放。IMF的 Global Debt Database 是我能找到的最好的替代品，但是时效性差了不少。总而言之，对于一个普通读者来说，想要真正去了解自己国家的债务状况，并不是一件容易的事情。
+7月22日，美国众议院通过法案，在未来两年内批准政府每年增加500亿美元的支出。目前的债务最高限额（debt ceilings）也被暂缓了。总统和国会又都可以高高兴兴地花钱了，反正债务已经累积如山，再加一点也无所谓。
+不过，毕竟债各有主，是债，就迟早要还的。
+更多阅读：
+ Aaron Kuriloff on WSJ - Taking Stock of the World’s Debt （试着在图五找找美国。提示：找不到的。） Elizabeth Warren on Medium- The Coming Economic Crash — And How to Stop It David Leonhardt on NYT - The Next Debt Bombs  </description>
+    </item>
+    
+  </channel>
+</rss>
