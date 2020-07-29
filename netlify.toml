@@ -1,6 +1,6 @@
 [build]
  publish = "public"
- command = "hugo -t"
+ command = "hugo -t jiafei_cactus"
 
 [context.production.environment]
  HUGO_VERSION = "0.74.0"
@@ -8,20 +8,20 @@
  HUGO_ENABLEGITINFO = "true"
 
 [context.split1]
- command = "hugo -t --enableGitInfo"
+ command = "hugo -t jiafei_cactus --enableGitInfo"
 
 [context.split1.environment]
  HUGO_VERSION = "0.74.0"
  HUGO_ENV = "production"
 
 [context.deploy-preview]
- command = "hugo -t --buildFuture -b $DEPLOY_PRIME_URL"
+ command = "hugo -t jiafei_cactus --buildFuture -b $DEPLOY_PRIME_URL"
 
 [context.deploy-preview.environment]
  HUGO_VERSION = "0.74.0"
 
 [context.branch-deploy]
- command = "hugo -t -b $DEPLOY_PRIME_URL"
+ command = "hugo -t jiafei_cactus -b $DEPLOY_PRIME_URL"
 
 [context.branch-deploy.environment]
  HUGO_VERSION = "0.74.0"
