@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> 债各有主 </title>
+  <meta name="description" content="Economist in the making. R user. Based in Chicago">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta property="og:title" content="债各有主" />
+<meta property="og:description" content="前几天看一则新闻，说全球债务总额今年已上升至246.5万亿美元，约占世界GDP的320%。其中，美国69万亿，中国40万亿，其他如欧元区，日本，英国等地区也贡献了不少，见下表。
+说实话，『全球债务总额』这个概念，我不是很理解。假如某天我和朋友喝多了胡扯，我向甲随手借了10万亿，甲向乙也借10万亿，乙又向我借10万亿，那我们仨其实是互不相欠的。可要换成新闻里的算法，这屋里的『债务总额』瞬间就成了30万亿；论美元的话，跟中美GDP加起来差不多。一顿小酒，让我和路人甲乙瞬间成为了世界上欠债最多的仨人。这让我不禁想起那个笑话，两个经济学家仅靠打赌，就创造了两个亿的GDP——只是在此就不便复述了。
+不过谈到债务，我还想起路透社前一阵的这篇报道。该报道称，中国2019年1季度的债务总额已经超过了GDP的303%，而去年同期仅有297%。作者在文中还不忘提醒读者，2季度中国GDP增速仅有6.2%，是27年来最低水平。而报道的最后一句可称经典：
+ Chinese officials have said repeatedly said debt risks are manageable overall.
+ 这句话怎么连文法都不通畅？不是我的摘抄失误，的确是路透社的原文如此。抛开词句不谈，言外之意很明确了：瞧瞧吧各位看官，债务都占到GDP的303%了，中方官员居然还反复说没事，可见其水平之高下。当然，这纯属一派胡言。报道中只字未提的是，美国的债务总额已经达到了其GDP的338%，金额比中国超出30万亿（怎么又是30万亿）。美国的人口仅占世界的5%， 而债务已经达到了『全球债务总额』的28%。相比之下，中国的债务总额仅占全球的15-16%左右。按中国五分之一的人口来计算，这个比例似乎不算太高。
+以上这些信息，出于某些原因，在一般的新闻中是很难找到的，除非是华盛顿邮报这样相对公立的媒体（只是相对）。即使去找报道中援引的数据来源，也只能找到一家私立的研究机构（ Institute of International Finance），其数据并不对外开放。IMF的 Global Debt Database 是我能找到的最好的替代品，但是时效性差了不少。总而言之，对于一个普通读者来说，想要真正去了解自己国家的债务状况，并不是一件容易的事情。
+7月22日，美国众议院通过法案，在未来两年内批准政府每年增加500亿美元的支出。目前的债务最高限额（debt ceilings）也被暂缓了。总统和国会又都可以高高兴兴地花钱了，反正债务已经累积如山，再加一点也无所谓。
+不过，毕竟债各有主，是债，就迟早要还的。
+更多阅读：
+ Aaron Kuriloff on WSJ - Taking Stock of the World’s Debt （试着在图五找找美国。提示：找不到的。） Elizabeth Warren on Medium- The Coming Economic Crash — And How to Stop It David Leonhardt on NYT - The Next Debt Bombs  " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jiafeili.netlify.app/posts/2019-07-23-debt/" />
+<meta property="article:published_time" content="2019-07-23T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-07-23T00:00:00+00:00" />
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="债各有主"/>
+<meta name="twitter:description" content="前几天看一则新闻，说全球债务总额今年已上升至246.5万亿美元，约占世界GDP的320%。其中，美国69万亿，中国40万亿，其他如欧元区，日本，英国等地区也贡献了不少，见下表。
+说实话，『全球债务总额』这个概念，我不是很理解。假如某天我和朋友喝多了胡扯，我向甲随手借了10万亿，甲向乙也借10万亿，乙又向我借10万亿，那我们仨其实是互不相欠的。可要换成新闻里的算法，这屋里的『债务总额』瞬间就成了30万亿；论美元的话，跟中美GDP加起来差不多。一顿小酒，让我和路人甲乙瞬间成为了世界上欠债最多的仨人。这让我不禁想起那个笑话，两个经济学家仅靠打赌，就创造了两个亿的GDP——只是在此就不便复述了。
+不过谈到债务，我还想起路透社前一阵的这篇报道。该报道称，中国2019年1季度的债务总额已经超过了GDP的303%，而去年同期仅有297%。作者在文中还不忘提醒读者，2季度中国GDP增速仅有6.2%，是27年来最低水平。而报道的最后一句可称经典：
+ Chinese officials have said repeatedly said debt risks are manageable overall.
+ 这句话怎么连文法都不通畅？不是我的摘抄失误，的确是路透社的原文如此。抛开词句不谈，言外之意很明确了：瞧瞧吧各位看官，债务都占到GDP的303%了，中方官员居然还反复说没事，可见其水平之高下。当然，这纯属一派胡言。报道中只字未提的是，美国的债务总额已经达到了其GDP的338%，金额比中国超出30万亿（怎么又是30万亿）。美国的人口仅占世界的5%， 而债务已经达到了『全球债务总额』的28%。相比之下，中国的债务总额仅占全球的15-16%左右。按中国五分之一的人口来计算，这个比例似乎不算太高。
+以上这些信息，出于某些原因，在一般的新闻中是很难找到的，除非是华盛顿邮报这样相对公立的媒体（只是相对）。即使去找报道中援引的数据来源，也只能找到一家私立的研究机构（ Institute of International Finance），其数据并不对外开放。IMF的 Global Debt Database 是我能找到的最好的替代品，但是时效性差了不少。总而言之，对于一个普通读者来说，想要真正去了解自己国家的债务状况，并不是一件容易的事情。
+7月22日，美国众议院通过法案，在未来两年内批准政府每年增加500亿美元的支出。目前的债务最高限额（debt ceilings）也被暂缓了。总统和国会又都可以高高兴兴地花钱了，反正债务已经累积如山，再加一点也无所谓。
+不过，毕竟债各有主，是债，就迟早要还的。
+更多阅读：
+ Aaron Kuriloff on WSJ - Taking Stock of the World’s Debt （试着在图五找找美国。提示：找不到的。） Elizabeth Warren on Medium- The Coming Economic Crash — And How to Stop It David Leonhardt on NYT - The Next Debt Bombs  "/>
+
+  
+  
+    
+  
+  
+  <link rel="stylesheet" href="https://jiafeili.netlify.app/css/style-classic.css">
+  
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+<link rel="icon" type="image/png" href="https://jiafeili.netlify.app/images/favicon.ico" />
+
+  
+  
+  
+</head>
+<body class="max-width mx-auto px3 ltr">
+  <div class="content index py4">
+
+  <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+        <li><a href="/">Home</a></li>
+         
+        <li><a href="/posts">Posts</a></li>
+         
+        <li><a href="/others">Others</a></li>
+         
+        <li><a href="/about">About</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li>
+          <a class="icon" href=" https://jiafeili.netlify.app/posts/2019-07-17-phillipscurve/">
+            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a class="icon" href="https://jiafeili.netlify.app/posts/2019-08-19-relax/">
+            <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i>
+          </a>
+        </li>
+        
+        <li>
+          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');">
+            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#">
+            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fjiafeili.netlify.app%2fposts%2f2019-07-23-debt%2f">
+      <i class="fab fa-facebook " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fjiafeili.netlify.app%2fposts%2f2019-07-23-debt%2f&text=%e5%80%ba%e5%90%84%e6%9c%89%e4%b8%bb">
+      <i class="fab fa-twitter " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fjiafeili.netlify.app%2fposts%2f2019-07-23-debt%2f&title=%e5%80%ba%e5%90%84%e6%9c%89%e4%b8%bb">
+      <i class="fab fa-linkedin " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fjiafeili.netlify.app%2fposts%2f2019-07-23-debt%2f&is_video=false&description=%e5%80%ba%e5%90%84%e6%9c%89%e4%b8%bb">
+      <i class="fab fa-pinterest " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=%e5%80%ba%e5%90%84%e6%9c%89%e4%b8%bb&body=Check out this article: https%3a%2f%2fjiafeili.netlify.app%2fposts%2f2019-07-23-debt%2f">
+      <i class="fas fa-envelope " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fjiafeili.netlify.app%2fposts%2f2019-07-23-debt%2f&title=%e5%80%ba%e5%90%84%e6%9c%89%e4%b8%bb">
+      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fjiafeili.netlify.app%2fposts%2f2019-07-23-debt%2f&title=%e5%80%ba%e5%90%84%e6%9c%89%e4%b8%bb">
+      <i class="fab fa-reddit " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2fjiafeili.netlify.app%2fposts%2f2019-07-23-debt%2f&title=%e5%80%ba%e5%90%84%e6%9c%89%e4%b8%bb">
+      <i class="fab fa-stumbleupon " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://digg.com/submit?url=https%3a%2f%2fjiafeili.netlify.app%2fposts%2f2019-07-23-debt%2f&title=%e5%80%ba%e5%90%84%e6%9c%89%e4%b8%bb">
+      <i class="fab fa-digg " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fjiafeili.netlify.app%2fposts%2f2019-07-23-debt%2f&name=%e5%80%ba%e5%90%84%e6%9c%89%e4%b8%bb&description=%e5%89%8d%e5%87%a0%e5%a4%a9%e7%9c%8b%e4%b8%80%e5%88%99%e6%96%b0%e9%97%bb%ef%bc%8c%e8%af%b4%e5%85%a8%e7%90%83%e5%80%ba%e5%8a%a1%e6%80%bb%e9%a2%9d%e4%bb%8a%e5%b9%b4%e5%b7%b2%e4%b8%8a%e5%8d%87%e8%87%b3246.5%e4%b8%87%e4%ba%bf%e7%be%8e%e5%85%83%ef%bc%8c%e7%ba%a6%e5%8d%a0%e4%b8%96%e7%95%8cGDP%e7%9a%84320%25%e3%80%82%e5%85%b6%e4%b8%ad%ef%bc%8c%e7%be%8e%e5%9b%bd69%e4%b8%87%e4%ba%bf%ef%bc%8c%e4%b8%ad%e5%9b%bd40%e4%b8%87%e4%ba%bf%ef%bc%8c%e5%85%b6%e4%bb%96%e5%a6%82%e6%ac%a7%e5%85%83%e5%8c%ba%ef%bc%8c%e6%97%a5%e6%9c%ac%ef%bc%8c%e8%8b%b1%e5%9b%bd%e7%ad%89%e5%9c%b0%e5%8c%ba%e4%b9%9f%e8%b4%a1%e7%8c%ae%e4%ba%86%e4%b8%8d%e5%b0%91%ef%bc%8c%e8%a7%81%e4%b8%8b%e8%a1%a8%e3%80%82%0a%e8%af%b4%e5%ae%9e%e8%af%9d%ef%bc%8c%e3%80%8e%e5%85%a8%e7%90%83%e5%80%ba%e5%8a%a1%e6%80%bb%e9%a2%9d%e3%80%8f%e8%bf%99%e4%b8%aa%e6%a6%82%e5%bf%b5%ef%bc%8c%e6%88%91%e4%b8%8d%e6%98%af%e5%be%88%e7%90%86%e8%a7%a3%e3%80%82%e5%81%87%e5%a6%82%e6%9f%90%e5%a4%a9%e6%88%91%e5%92%8c%e6%9c%8b%e5%8f%8b%e5%96%9d%e5%a4%9a%e4%ba%86%e8%83%a1%e6%89%af%ef%bc%8c%e6%88%91%e5%90%91%e7%94%b2%e9%9a%8f%e6%89%8b%e5%80%9f%e4%ba%8610%e4%b8%87%e4%ba%bf%ef%bc%8c%e7%94%b2%e5%90%91%e4%b9%99%e4%b9%9f%e5%80%9f10%e4%b8%87%e4%ba%bf%ef%bc%8c%e4%b9%99%e5%8f%88%e5%90%91%e6%88%91%e5%80%9f10%e4%b8%87%e4%ba%bf%ef%bc%8c%e9%82%a3%e6%88%91%e4%bb%ac%e4%bb%a8%e5%85%b6%e5%ae%9e%e6%98%af%e4%ba%92%e4%b8%8d%e7%9b%b8%e6%ac%a0%e7%9a%84%e3%80%82%e5%8f%af%e8%a6%81%e6%8d%a2%e6%88%90%e6%96%b0%e9%97%bb%e9%87%8c%e7%9a%84%e7%ae%97%e6%b3%95%ef%bc%8c%e8%bf%99%e5%b1%8b%e9%87%8c%e7%9a%84%e3%80%8e%e5%80%ba%e5%8a%a1%e6%80%bb%e9%a2%9d%e3%80%8f%e7%9e%ac%e9%97%b4%e5%b0%b1%e6%88%90%e4%ba%8630%e4%b8%87%e4%ba%bf%ef%bc%9b%e8%ae%ba%e7%be%8e%e5%85%83%e7%9a%84%e8%af%9d%ef%bc%8c%e8%b7%9f%e4%b8%ad%e7%be%8eGDP%e5%8a%a0%e8%b5%b7%e6%9d%a5%e5%b7%ae%e4%b8%8d%e5%a4%9a%e3%80%82%e4%b8%80%e9%a1%bf%e5%b0%8f%e9%85%92%ef%bc%8c%e8%ae%a9%e6%88%91%e5%92%8c%e8%b7%af%e4%ba%ba%e7%94%b2%e4%b9%99%e7%9e%ac%e9%97%b4%e6%88%90%e4%b8%ba%e4%ba%86%e4%b8%96%e7%95%8c%e4%b8%8a%e6%ac%a0%e5%80%ba%e6%9c%80%e5%a4%9a%e7%9a%84%e4%bb%a8%e4%ba%ba%e3%80%82%e8%bf%99%e8%ae%a9%e6%88%91%e4%b8%8d%e7%a6%81%e6%83%b3%e8%b5%b7%e9%82%a3%e4%b8%aa%e7%ac%91%e8%af%9d%ef%bc%8c%e4%b8%a4%e4%b8%aa%e7%bb%8f%e6%b5%8e%e5%ad%a6%e5%ae%b6%e4%bb%85%e9%9d%a0%e6%89%93%e8%b5%8c%ef%bc%8c%e5%b0%b1%e5%88%9b%e9%80%a0%e4%ba%86%e4%b8%a4%e4%b8%aa%e4%ba%bf%e7%9a%84GDP%e2%80%94%e2%80%94%e5%8f%aa%e6%98%af%e5%9c%a8%e6%ad%a4%e5%b0%b1%e4%b8%8d%e4%be%bf%e5%a4%8d%e8%bf%b0%e4%ba%86%e3%80%82%0a%e4%b8%8d%e8%bf%87%e8%b0%88%e5%88%b0%e5%80%ba%e5%8a%a1%ef%bc%8c%e6%88%91%e8%bf%98%e6%83%b3%e8%b5%b7%e8%b7%af%e9%80%8f%e7%a4%be%e5%89%8d%e4%b8%80%e9%98%b5%e7%9a%84%e8%bf%99%e7%af%87%e6%8a%a5%e9%81%93%e3%80%82%e8%af%a5%e6%8a%a5%e9%81%93%e7%a7%b0%ef%bc%8c%e4%b8%ad%e5%9b%bd2019%e5%b9%b41%e5%ad%a3%e5%ba%a6%e7%9a%84%e5%80%ba%e5%8a%a1%e6%80%bb%e9%a2%9d%e5%b7%b2%e7%bb%8f%e8%b6%85%e8%bf%87%e4%ba%86GDP%e7%9a%84303%25%ef%bc%8c%e8%80%8c%e5%8e%bb%e5%b9%b4%e5%90%8c%e6%9c%9f%e4%bb%85%e6%9c%89297%25%e3%80%82%e4%bd%9c%e8%80%85%e5%9c%a8%e6%96%87%e4%b8%ad%e8%bf%98%e4%b8%8d%e5%bf%98%e6%8f%90%e9%86%92%e8%af%bb%e8%80%85%ef%bc%8c2%e5%ad%a3%e5%ba%a6%e4%b8%ad%e5%9b%bdGDP%e5%a2%9e%e9%80%9f%e4%bb%85%e6%9c%896.2%25%ef%bc%8c%e6%98%af27%e5%b9%b4%e6%9d%a5%e6%9c%80%e4%bd%8e%e6%b0%b4%e5%b9%b3%e3%80%82%e8%80%8c%e6%8a%a5%e9%81%93%e7%9a%84%e6%9c%80%e5%90%8e%e4%b8%80%e5%8f%a5%e5%8f%af%e7%a7%b0%e7%bb%8f%e5%85%b8%ef%bc%9a%0a%20Chinese%20officials%20have%20said%20repeatedly%20said%20debt%20risks%20are%20manageable%20overall.%0a%20%e8%bf%99%e5%8f%a5%e8%af%9d%e6%80%8e%e4%b9%88%e8%bf%9e%e6%96%87%e6%b3%95%e9%83%bd%e4%b8%8d%e9%80%9a%e7%95%85%ef%bc%9f%e4%b8%8d%e6%98%af%e6%88%91%e7%9a%84%e6%91%98%e6%8a%84%e5%a4%b1%e8%af%af%ef%bc%8c%e7%9a%84%e7%a1%ae%e6%98%af%e8%b7%af%e9%80%8f%e7%a4%be%e7%9a%84%e5%8e%9f%e6%96%87%e5%a6%82%e6%ad%a4%e3%80%82%e6%8a%9b%e5%bc%80%e8%af%8d%e5%8f%a5%e4%b8%8d%e8%b0%88%ef%bc%8c%e8%a8%80%e5%a4%96%e4%b9%8b%e6%84%8f%e5%be%88%e6%98%8e%e7%a1%ae%e4%ba%86%ef%bc%9a%e7%9e%a7%e7%9e%a7%e5%90%a7%e5%90%84%e4%bd%8d%e7%9c%8b%e5%ae%98%ef%bc%8c%e5%80%ba%e5%8a%a1%e9%83%bd%e5%8d%a0%e5%88%b0GDP%e7%9a%84303%25%e4%ba%86%ef%bc%8c%e4%b8%ad%e6%96%b9%e5%ae%98%e5%91%98%e5%b1%85%e7%84%b6%e8%bf%98%e5%8f%8d%e5%a4%8d%e8%af%b4%e6%b2%a1%e4%ba%8b%ef%bc%8c%e5%8f%af%e8%a7%81%e5%85%b6%e6%b0%b4%e5%b9%b3%e4%b9%8b%e9%ab%98%e4%b8%8b%e3%80%82%e5%bd%93%e7%84%b6%ef%bc%8c%e8%bf%99%e7%ba%af%e5%b1%9e%e4%b8%80%e6%b4%be%e8%83%a1%e8%a8%80%e3%80%82%e6%8a%a5%e9%81%93%e4%b8%ad%e5%8f%aa%e5%ad%97%e6%9c%aa%e6%8f%90%e7%9a%84%e6%98%af%ef%bc%8c%e7%be%8e%e5%9b%bd%e7%9a%84%e5%80%ba%e5%8a%a1%e6%80%bb%e9%a2%9d%e5%b7%b2%e7%bb%8f%e8%be%be%e5%88%b0%e4%ba%86%e5%85%b6GDP%e7%9a%84338%25%ef%bc%8c%e9%87%91%e9%a2%9d%e6%af%94%e4%b8%ad%e5%9b%bd%e8%b6%85%e5%87%ba30%e4%b8%87%e4%ba%bf%ef%bc%88%e6%80%8e%e4%b9%88%e5%8f%88%e6%98%af30%e4%b8%87%e4%ba%bf%ef%bc%89%e3%80%82%e7%be%8e%e5%9b%bd%e7%9a%84%e4%ba%ba%e5%8f%a3%e4%bb%85%e5%8d%a0%e4%b8%96%e7%95%8c%e7%9a%845%25%ef%bc%8c%20%e8%80%8c%e5%80%ba%e5%8a%a1%e5%b7%b2%e7%bb%8f%e8%be%be%e5%88%b0%e4%ba%86%e3%80%8e%e5%85%a8%e7%90%83%e5%80%ba%e5%8a%a1%e6%80%bb%e9%a2%9d%e3%80%8f%e7%9a%8428%25%e3%80%82%e7%9b%b8%e6%af%94%e4%b9%8b%e4%b8%8b%ef%bc%8c%e4%b8%ad%e5%9b%bd%e7%9a%84%e5%80%ba%e5%8a%a1%e6%80%bb%e9%a2%9d%e4%bb%85%e5%8d%a0%e5%85%a8%e7%90%83%e7%9a%8415-16%25%e5%b7%a6%e5%8f%b3%e3%80%82%e6%8c%89%e4%b8%ad%e5%9b%bd%e4%ba%94%e5%88%86%e4%b9%8b%e4%b8%80%e7%9a%84%e4%ba%ba%e5%8f%a3%e6%9d%a5%e8%ae%a1%e7%ae%97%ef%bc%8c%e8%bf%99%e4%b8%aa%e6%af%94%e4%be%8b%e4%bc%bc%e4%b9%8e%e4%b8%8d%e7%ae%97%e5%a4%aa%e9%ab%98%e3%80%82%0a%e4%bb%a5%e4%b8%8a%e8%bf%99%e4%ba%9b%e4%bf%a1%e6%81%af%ef%bc%8c%e5%87%ba%e4%ba%8e%e6%9f%90%e4%ba%9b%e5%8e%9f%e5%9b%a0%ef%bc%8c%e5%9c%a8%e4%b8%80%e8%88%ac%e7%9a%84%e6%96%b0%e9%97%bb%e4%b8%ad%e6%98%af%e5%be%88%e9%9a%be%e6%89%be%e5%88%b0%e7%9a%84%ef%bc%8c%e9%99%a4%e9%9d%9e%e6%98%af%e5%8d%8e%e7%9b%9b%e9%a1%bf%e9%82%ae%e6%8a%a5%e8%bf%99%e6%a0%b7%e7%9b%b8%e5%af%b9%e5%85%ac%e7%ab%8b%e7%9a%84%e5%aa%92%e4%bd%93%ef%bc%88%e5%8f%aa%e6%98%af%e7%9b%b8%e5%af%b9%ef%bc%89%e3%80%82%e5%8d%b3%e4%bd%bf%e5%8e%bb%e6%89%be%e6%8a%a5%e9%81%93%e4%b8%ad%e6%8f%b4%e5%bc%95%e7%9a%84%e6%95%b0%e6%8d%ae%e6%9d%a5%e6%ba%90%ef%bc%8c%e4%b9%9f%e5%8f%aa%e8%83%bd%e6%89%be%e5%88%b0%e4%b8%80%e5%ae%b6%e7%a7%81%e7%ab%8b%e7%9a%84%e7%a0%94%e7%a9%b6%e6%9c%ba%e6%9e%84%ef%bc%88%20Institute%20of%20International%20Finance%ef%bc%89%ef%bc%8c%e5%85%b6%e6%95%b0%e6%8d%ae%e5%b9%b6%e4%b8%8d%e5%af%b9%e5%a4%96%e5%bc%80%e6%94%be%e3%80%82IMF%e7%9a%84%20Global%20Debt%20Database%20%e6%98%af%e6%88%91%e8%83%bd%e6%89%be%e5%88%b0%e7%9a%84%e6%9c%80%e5%a5%bd%e7%9a%84%e6%9b%bf%e4%bb%a3%e5%93%81%ef%bc%8c%e4%bd%86%e6%98%af%e6%97%b6%e6%95%88%e6%80%a7%e5%b7%ae%e4%ba%86%e4%b8%8d%e5%b0%91%e3%80%82%e6%80%bb%e8%80%8c%e8%a8%80%e4%b9%8b%ef%bc%8c%e5%af%b9%e4%ba%8e%e4%b8%80%e4%b8%aa%e6%99%ae%e9%80%9a%e8%af%bb%e8%80%85%e6%9d%a5%e8%af%b4%ef%bc%8c%e6%83%b3%e8%a6%81%e7%9c%9f%e6%ad%a3%e5%8e%bb%e4%ba%86%e8%a7%a3%e8%87%aa%e5%b7%b1%e5%9b%bd%e5%ae%b6%e7%9a%84%e5%80%ba%e5%8a%a1%e7%8a%b6%e5%86%b5%ef%bc%8c%e5%b9%b6%e4%b8%8d%e6%98%af%e4%b8%80%e4%bb%b6%e5%ae%b9%e6%98%93%e7%9a%84%e4%ba%8b%e6%83%85%e3%80%82%0a7%e6%9c%8822%e6%97%a5%ef%bc%8c%e7%be%8e%e5%9b%bd%e4%bc%97%e8%ae%ae%e9%99%a2%e9%80%9a%e8%bf%87%e6%b3%95%e6%a1%88%ef%bc%8c%e5%9c%a8%e6%9c%aa%e6%9d%a5%e4%b8%a4%e5%b9%b4%e5%86%85%e6%89%b9%e5%87%86%e6%94%bf%e5%ba%9c%e6%af%8f%e5%b9%b4%e5%a2%9e%e5%8a%a0500%e4%ba%bf%e7%be%8e%e5%85%83%e7%9a%84%e6%94%af%e5%87%ba%e3%80%82%e7%9b%ae%e5%89%8d%e7%9a%84%e5%80%ba%e5%8a%a1%e6%9c%80%e9%ab%98%e9%99%90%e9%a2%9d%ef%bc%88debt%20ceilings%ef%bc%89%e4%b9%9f%e8%a2%ab%e6%9a%82%e7%bc%93%e4%ba%86%e3%80%82%e6%80%bb%e7%bb%9f%e5%92%8c%e5%9b%bd%e4%bc%9a%e5%8f%88%e9%83%bd%e5%8f%af%e4%bb%a5%e9%ab%98%e9%ab%98%e5%85%b4%e5%85%b4%e5%9c%b0%e8%8a%b1%e9%92%b1%e4%ba%86%ef%bc%8c%e5%8f%8d%e6%ad%a3%e5%80%ba%e5%8a%a1%e5%b7%b2%e7%bb%8f%e7%b4%af%e7%a7%af%e5%a6%82%e5%b1%b1%ef%bc%8c%e5%86%8d%e5%8a%a0%e4%b8%80%e7%82%b9%e4%b9%9f%e6%97%a0%e6%89%80%e8%b0%93%e3%80%82%0a%e4%b8%8d%e8%bf%87%ef%bc%8c%e6%af%95%e7%ab%9f%e5%80%ba%e5%90%84%e6%9c%89%e4%b8%bb%ef%bc%8c%e6%98%af%e5%80%ba%ef%bc%8c%e5%b0%b1%e8%bf%9f%e6%97%a9%e8%a6%81%e8%bf%98%e7%9a%84%e3%80%82%0a%e6%9b%b4%e5%a4%9a%e9%98%85%e8%af%bb%ef%bc%9a%0a%20Aaron%20Kuriloff%20on%20WSJ%20-%20Taking%20Stock%20of%20the%20World%e2%80%99s%20Debt%20%ef%bc%88%e8%af%95%e7%9d%80%e5%9c%a8%e5%9b%be%e4%ba%94%e6%89%be%e6%89%be%e7%be%8e%e5%9b%bd%e3%80%82%e6%8f%90%e7%a4%ba%ef%bc%9a%e6%89%be%e4%b8%8d%e5%88%b0%e7%9a%84%e3%80%82%ef%bc%89%20Elizabeth%20Warren%20on%20Medium-%20The%20Coming%20Economic%20Crash%20%e2%80%94%20And%20How%20to%20Stop%20It%20David%20Leonhardt%20on%20NYT%20-%20The%20Next%20Debt%20Bombs%20%20">
+      <i class="fab fa-tumblr " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fjiafeili.netlify.app%2fposts%2f2019-07-23-debt%2f&t=%e5%80%ba%e5%90%84%e6%9c%89%e4%b8%bb">
+      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <nav id="TableOfContents"></nav>
+    </div>
+  </span>
+</div>
+
+
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <h1 class="posttitle" itemprop="name headline">
+        债各有主
+      </h1>
+      <div class="meta">
+        
+        <div class="postdate">
+          
+          <time datetime="2019-07-23 00:00:00 &#43;0000 UTC" itemprop="datePublished">2019-07-23</time>
+          
+        </div>
+        
+        
+        <div class="article-tag">
+            <i class="fas fa-tag"></i>
+            
+            
+            <a class="tag-link" href="/tags/thoughts" rel="tag">thoughts</a>
+            
+            
+            <a class="tag-link" href="/tags/economics" rel="tag">economics</a>
+            
+              
+            <a class="tag-link" href="/tags/news" rel="tag">news</a>
+            
+              
+            <a class="tag-link" href="/tags/macroeconomics" rel="tag">macroeconomics</a>
+            
+        </div>
+        
+      </div>
+    </header>
+
+  
+    <div class="content" itemprop="articleBody">
+      <p>前几天看一则<a href="https://www.axios.com/global-debt-increase-q1-2019-92ef0a63-b86e-471d-84c8-588a719f3fc2.html">新闻</a>，说全球债务总额今年已上升至246.5万亿美元，约占世界GDP的320%。其中，美国69万亿，中国40万亿，其他如欧元区，日本，英国等地区也贡献了不少，见下表。</p>
+<p><img src="https://www.washingtonpost.com/resizer/CshI4MZ7RHKUIprmVr3rJxb8Vnw=/460x0/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/HTHFHGFIUII6TI5GVNTQSYW3AU.jpg" alt=""></p>
+<p>说实话，『全球债务总额』这个概念，我不是很理解。假如某天我和朋友喝多了胡扯，我向甲随手借了10万亿，甲向乙也借10万亿，乙又向我借10万亿，那我们仨其实是互不相欠的。可要换成新闻里的算法，这屋里的『债务总额』瞬间就成了30万亿；论美元的话，跟中美GDP加起来差不多。一顿小酒，让我和路人甲乙瞬间成为了世界上欠债最多的仨人。这让我不禁想起那个笑话，两个经济学家仅靠打赌，就创造了两个亿的GDP——只是在此就不便复述了。</p>
+<p>不过谈到债务，我还想起路透社前一阵的<a href="https://www.reuters.com/article/us-china-economy-debt/chinas-debt-tops-300-of-gdp-now-15-of-global-total-iif-idUSKCN1UD0KD">这篇报道</a>。该报道称，中国2019年1季度的债务总额已经超过了GDP的303%，而去年同期仅有297%。作者在文中还不忘提醒读者，2季度中国GDP增速仅有6.2%，是27年来最低水平。而报道的最后一句可称经典：</p>
+<blockquote>
+<p>Chinese officials have said repeatedly said debt risks are manageable overall.</p>
+</blockquote>
+<p>这句话怎么连文法都不通畅？不是我的摘抄失误，的确是路透社的原文如此。抛开词句不谈，言外之意很明确了：瞧瞧吧各位看官，债务都占到GDP的303%了，中方官员居然还反复说没事，可见其水平之高下。当然，这纯属一派胡言。报道中只字未提的是，美国的债务总额已经达到了其GDP的338%，金额比中国超出30万亿（怎么又是30万亿）。美国的人口仅占世界的5%， 而债务已经达到了『全球债务总额』的28%。相比之下，中国的债务总额仅占全球的15-16%左右。按中国五分之一的人口来计算，这个比例似乎不算太高。</p>
+<p>以上这些信息，出于某些原因，在<a href="https://www.bloomberg.com/news/articles/2019-07-16/china-s-debt-growth-keeps-marching-on-as-economy-loses-pace">一般的新闻</a>中是很难找到的，除非是<a href="https://www.washingtonpost.com/opinions/will-the-global-debt-bomb-explode-again/2019/07/17/e8756d5c-a89e-11e9-a3a6-ab670962db05_story.html?noredirect=on&amp;utm_term=.f50970c6a898">华盛顿邮报</a>这样相对公立的媒体（只是相对）。即使去找报道中援引的数据来源，也只能找到一家私立的研究机构（ Institute of International Finance），其数据并不对外开放。IMF的 <a href="https://www.imf.org/external/datamapper/datasets/GDD">Global Debt Database</a> 是我能找到的最好的替代品，但是时效性差了不少。总而言之，对于一个普通读者来说，想要真正去了解自己国家的债务状况，并不是一件容易的事情。</p>
+<p>7月22日，美国众议院<a href="https://www.wsj.com/articles/white-house-and-congress-near-agreement-on-spending-debt-ceiling-11563799484">通过法案</a>，在未来两年内批准政府每年增加500亿美元的支出。目前的债务最高限额（debt ceilings）也被暂缓了。总统和国会又都可以高高兴兴地花钱了，反正债务已经累积如山，再加一点也无所谓。</p>
+<p>不过，毕竟债各有主，是债，就迟早要还的。</p>
+<p><em>更多阅读：</em></p>
+<ul>
+<li>Aaron Kuriloff on WSJ - <a href="https://www.wsj.com/articles/taking-stock-of-the-worlds-debt-11545906600">Taking Stock of the World’s Debt</a> （试着在图五找找美国。提示：找不到的。）</li>
+<li>Elizabeth Warren on Medium- <a href="https://medium.com/@teamwarren/the-coming-economic-crash-and-how-to-stop-it-355703da148b">The Coming Economic Crash — And How to Stop It</a></li>
+<li>David Leonhardt on NYT - <a href="https://www.nytimes.com/2019/07/22/opinion/elizabeth-warren-financial-crisis.html?auth=login-email&amp;login=email">The Next Debt Bombs</a></li>
+</ul>
+
+    </div>
+  </article>
+  <script type="text/javascript">
+document.addEventListener('keyup', function(e) {
+  if (e.target.nodeName.toUpperCase() != 'BODY') return;
+  var url = false;
+  if (e.which == 37) {  
+    
+    url = '\/posts\/2019-07-17-phillipscurve\/';
+    
+  } else if (e.which == 39) {  
+    
+    url = '\/posts\/2019-08-19-relax\/';
+    
+  }
+  if (url) window.location = url;
+});
+</script>
+
+
+  
+  
+
+
+
+
+  
+    <div class="blog-post-comments">
+      <div id="disqus_thread"></div>
+      <script>
+
+      
+
+      
+
+      (function() { 
+      var d = document, s = d.createElement('script');
+      s.src = 'https://jiafeili-github.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>                
+    </div>
+
+  
+
+
+
+  <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/posts">Posts</a></li>
+         
+          <li><a href="/others">Others</a></li>
+         
+          <li><a href="/about">About</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <nav id="TableOfContents"></nav>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fjiafeili.netlify.app%2fposts%2f2019-07-23-debt%2f">
+      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fjiafeili.netlify.app%2fposts%2f2019-07-23-debt%2f&text=%e5%80%ba%e5%90%84%e6%9c%89%e4%b8%bb">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fjiafeili.netlify.app%2fposts%2f2019-07-23-debt%2f&title=%e5%80%ba%e5%90%84%e6%9c%89%e4%b8%bb">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fjiafeili.netlify.app%2fposts%2f2019-07-23-debt%2f&is_video=false&description=%e5%80%ba%e5%90%84%e6%9c%89%e4%b8%bb">
+      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=%e5%80%ba%e5%90%84%e6%9c%89%e4%b8%bb&body=Check out this article: https%3a%2f%2fjiafeili.netlify.app%2fposts%2f2019-07-23-debt%2f">
+      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fjiafeili.netlify.app%2fposts%2f2019-07-23-debt%2f&title=%e5%80%ba%e5%90%84%e6%9c%89%e4%b8%bb">
+      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fjiafeili.netlify.app%2fposts%2f2019-07-23-debt%2f&title=%e5%80%ba%e5%90%84%e6%9c%89%e4%b8%bb">
+      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2fjiafeili.netlify.app%2fposts%2f2019-07-23-debt%2f&title=%e5%80%ba%e5%90%84%e6%9c%89%e4%b8%bb">
+      <i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://digg.com/submit?url=https%3a%2f%2fjiafeili.netlify.app%2fposts%2f2019-07-23-debt%2f&title=%e5%80%ba%e5%90%84%e6%9c%89%e4%b8%bb">
+      <i class="fab fa-digg fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fjiafeili.netlify.app%2fposts%2f2019-07-23-debt%2f&name=%e5%80%ba%e5%90%84%e6%9c%89%e4%b8%bb&description=%e5%89%8d%e5%87%a0%e5%a4%a9%e7%9c%8b%e4%b8%80%e5%88%99%e6%96%b0%e9%97%bb%ef%bc%8c%e8%af%b4%e5%85%a8%e7%90%83%e5%80%ba%e5%8a%a1%e6%80%bb%e9%a2%9d%e4%bb%8a%e5%b9%b4%e5%b7%b2%e4%b8%8a%e5%8d%87%e8%87%b3246.5%e4%b8%87%e4%ba%bf%e7%be%8e%e5%85%83%ef%bc%8c%e7%ba%a6%e5%8d%a0%e4%b8%96%e7%95%8cGDP%e7%9a%84320%25%e3%80%82%e5%85%b6%e4%b8%ad%ef%bc%8c%e7%be%8e%e5%9b%bd69%e4%b8%87%e4%ba%bf%ef%bc%8c%e4%b8%ad%e5%9b%bd40%e4%b8%87%e4%ba%bf%ef%bc%8c%e5%85%b6%e4%bb%96%e5%a6%82%e6%ac%a7%e5%85%83%e5%8c%ba%ef%bc%8c%e6%97%a5%e6%9c%ac%ef%bc%8c%e8%8b%b1%e5%9b%bd%e7%ad%89%e5%9c%b0%e5%8c%ba%e4%b9%9f%e8%b4%a1%e7%8c%ae%e4%ba%86%e4%b8%8d%e5%b0%91%ef%bc%8c%e8%a7%81%e4%b8%8b%e8%a1%a8%e3%80%82%0a%e8%af%b4%e5%ae%9e%e8%af%9d%ef%bc%8c%e3%80%8e%e5%85%a8%e7%90%83%e5%80%ba%e5%8a%a1%e6%80%bb%e9%a2%9d%e3%80%8f%e8%bf%99%e4%b8%aa%e6%a6%82%e5%bf%b5%ef%bc%8c%e6%88%91%e4%b8%8d%e6%98%af%e5%be%88%e7%90%86%e8%a7%a3%e3%80%82%e5%81%87%e5%a6%82%e6%9f%90%e5%a4%a9%e6%88%91%e5%92%8c%e6%9c%8b%e5%8f%8b%e5%96%9d%e5%a4%9a%e4%ba%86%e8%83%a1%e6%89%af%ef%bc%8c%e6%88%91%e5%90%91%e7%94%b2%e9%9a%8f%e6%89%8b%e5%80%9f%e4%ba%8610%e4%b8%87%e4%ba%bf%ef%bc%8c%e7%94%b2%e5%90%91%e4%b9%99%e4%b9%9f%e5%80%9f10%e4%b8%87%e4%ba%bf%ef%bc%8c%e4%b9%99%e5%8f%88%e5%90%91%e6%88%91%e5%80%9f10%e4%b8%87%e4%ba%bf%ef%bc%8c%e9%82%a3%e6%88%91%e4%bb%ac%e4%bb%a8%e5%85%b6%e5%ae%9e%e6%98%af%e4%ba%92%e4%b8%8d%e7%9b%b8%e6%ac%a0%e7%9a%84%e3%80%82%e5%8f%af%e8%a6%81%e6%8d%a2%e6%88%90%e6%96%b0%e9%97%bb%e9%87%8c%e7%9a%84%e7%ae%97%e6%b3%95%ef%bc%8c%e8%bf%99%e5%b1%8b%e9%87%8c%e7%9a%84%e3%80%8e%e5%80%ba%e5%8a%a1%e6%80%bb%e9%a2%9d%e3%80%8f%e7%9e%ac%e9%97%b4%e5%b0%b1%e6%88%90%e4%ba%8630%e4%b8%87%e4%ba%bf%ef%bc%9b%e8%ae%ba%e7%be%8e%e5%85%83%e7%9a%84%e8%af%9d%ef%bc%8c%e8%b7%9f%e4%b8%ad%e7%be%8eGDP%e5%8a%a0%e8%b5%b7%e6%9d%a5%e5%b7%ae%e4%b8%8d%e5%a4%9a%e3%80%82%e4%b8%80%e9%a1%bf%e5%b0%8f%e9%85%92%ef%bc%8c%e8%ae%a9%e6%88%91%e5%92%8c%e8%b7%af%e4%ba%ba%e7%94%b2%e4%b9%99%e7%9e%ac%e9%97%b4%e6%88%90%e4%b8%ba%e4%ba%86%e4%b8%96%e7%95%8c%e4%b8%8a%e6%ac%a0%e5%80%ba%e6%9c%80%e5%a4%9a%e7%9a%84%e4%bb%a8%e4%ba%ba%e3%80%82%e8%bf%99%e8%ae%a9%e6%88%91%e4%b8%8d%e7%a6%81%e6%83%b3%e8%b5%b7%e9%82%a3%e4%b8%aa%e7%ac%91%e8%af%9d%ef%bc%8c%e4%b8%a4%e4%b8%aa%e7%bb%8f%e6%b5%8e%e5%ad%a6%e5%ae%b6%e4%bb%85%e9%9d%a0%e6%89%93%e8%b5%8c%ef%bc%8c%e5%b0%b1%e5%88%9b%e9%80%a0%e4%ba%86%e4%b8%a4%e4%b8%aa%e4%ba%bf%e7%9a%84GDP%e2%80%94%e2%80%94%e5%8f%aa%e6%98%af%e5%9c%a8%e6%ad%a4%e5%b0%b1%e4%b8%8d%e4%be%bf%e5%a4%8d%e8%bf%b0%e4%ba%86%e3%80%82%0a%e4%b8%8d%e8%bf%87%e8%b0%88%e5%88%b0%e5%80%ba%e5%8a%a1%ef%bc%8c%e6%88%91%e8%bf%98%e6%83%b3%e8%b5%b7%e8%b7%af%e9%80%8f%e7%a4%be%e5%89%8d%e4%b8%80%e9%98%b5%e7%9a%84%e8%bf%99%e7%af%87%e6%8a%a5%e9%81%93%e3%80%82%e8%af%a5%e6%8a%a5%e9%81%93%e7%a7%b0%ef%bc%8c%e4%b8%ad%e5%9b%bd2019%e5%b9%b41%e5%ad%a3%e5%ba%a6%e7%9a%84%e5%80%ba%e5%8a%a1%e6%80%bb%e9%a2%9d%e5%b7%b2%e7%bb%8f%e8%b6%85%e8%bf%87%e4%ba%86GDP%e7%9a%84303%25%ef%bc%8c%e8%80%8c%e5%8e%bb%e5%b9%b4%e5%90%8c%e6%9c%9f%e4%bb%85%e6%9c%89297%25%e3%80%82%e4%bd%9c%e8%80%85%e5%9c%a8%e6%96%87%e4%b8%ad%e8%bf%98%e4%b8%8d%e5%bf%98%e6%8f%90%e9%86%92%e8%af%bb%e8%80%85%ef%bc%8c2%e5%ad%a3%e5%ba%a6%e4%b8%ad%e5%9b%bdGDP%e5%a2%9e%e9%80%9f%e4%bb%85%e6%9c%896.2%25%ef%bc%8c%e6%98%af27%e5%b9%b4%e6%9d%a5%e6%9c%80%e4%bd%8e%e6%b0%b4%e5%b9%b3%e3%80%82%e8%80%8c%e6%8a%a5%e9%81%93%e7%9a%84%e6%9c%80%e5%90%8e%e4%b8%80%e5%8f%a5%e5%8f%af%e7%a7%b0%e7%bb%8f%e5%85%b8%ef%bc%9a%0a%20Chinese%20officials%20have%20said%20repeatedly%20said%20debt%20risks%20are%20manageable%20overall.%0a%20%e8%bf%99%e5%8f%a5%e8%af%9d%e6%80%8e%e4%b9%88%e8%bf%9e%e6%96%87%e6%b3%95%e9%83%bd%e4%b8%8d%e9%80%9a%e7%95%85%ef%bc%9f%e4%b8%8d%e6%98%af%e6%88%91%e7%9a%84%e6%91%98%e6%8a%84%e5%a4%b1%e8%af%af%ef%bc%8c%e7%9a%84%e7%a1%ae%e6%98%af%e8%b7%af%e9%80%8f%e7%a4%be%e7%9a%84%e5%8e%9f%e6%96%87%e5%a6%82%e6%ad%a4%e3%80%82%e6%8a%9b%e5%bc%80%e8%af%8d%e5%8f%a5%e4%b8%8d%e8%b0%88%ef%bc%8c%e8%a8%80%e5%a4%96%e4%b9%8b%e6%84%8f%e5%be%88%e6%98%8e%e7%a1%ae%e4%ba%86%ef%bc%9a%e7%9e%a7%e7%9e%a7%e5%90%a7%e5%90%84%e4%bd%8d%e7%9c%8b%e5%ae%98%ef%bc%8c%e5%80%ba%e5%8a%a1%e9%83%bd%e5%8d%a0%e5%88%b0GDP%e7%9a%84303%25%e4%ba%86%ef%bc%8c%e4%b8%ad%e6%96%b9%e5%ae%98%e5%91%98%e5%b1%85%e7%84%b6%e8%bf%98%e5%8f%8d%e5%a4%8d%e8%af%b4%e6%b2%a1%e4%ba%8b%ef%bc%8c%e5%8f%af%e8%a7%81%e5%85%b6%e6%b0%b4%e5%b9%b3%e4%b9%8b%e9%ab%98%e4%b8%8b%e3%80%82%e5%bd%93%e7%84%b6%ef%bc%8c%e8%bf%99%e7%ba%af%e5%b1%9e%e4%b8%80%e6%b4%be%e8%83%a1%e8%a8%80%e3%80%82%e6%8a%a5%e9%81%93%e4%b8%ad%e5%8f%aa%e5%ad%97%e6%9c%aa%e6%8f%90%e7%9a%84%e6%98%af%ef%bc%8c%e7%be%8e%e5%9b%bd%e7%9a%84%e5%80%ba%e5%8a%a1%e6%80%bb%e9%a2%9d%e5%b7%b2%e7%bb%8f%e8%be%be%e5%88%b0%e4%ba%86%e5%85%b6GDP%e7%9a%84338%25%ef%bc%8c%e9%87%91%e9%a2%9d%e6%af%94%e4%b8%ad%e5%9b%bd%e8%b6%85%e5%87%ba30%e4%b8%87%e4%ba%bf%ef%bc%88%e6%80%8e%e4%b9%88%e5%8f%88%e6%98%af30%e4%b8%87%e4%ba%bf%ef%bc%89%e3%80%82%e7%be%8e%e5%9b%bd%e7%9a%84%e4%ba%ba%e5%8f%a3%e4%bb%85%e5%8d%a0%e4%b8%96%e7%95%8c%e7%9a%845%25%ef%bc%8c%20%e8%80%8c%e5%80%ba%e5%8a%a1%e5%b7%b2%e7%bb%8f%e8%be%be%e5%88%b0%e4%ba%86%e3%80%8e%e5%85%a8%e7%90%83%e5%80%ba%e5%8a%a1%e6%80%bb%e9%a2%9d%e3%80%8f%e7%9a%8428%25%e3%80%82%e7%9b%b8%e6%af%94%e4%b9%8b%e4%b8%8b%ef%bc%8c%e4%b8%ad%e5%9b%bd%e7%9a%84%e5%80%ba%e5%8a%a1%e6%80%bb%e9%a2%9d%e4%bb%85%e5%8d%a0%e5%85%a8%e7%90%83%e7%9a%8415-16%25%e5%b7%a6%e5%8f%b3%e3%80%82%e6%8c%89%e4%b8%ad%e5%9b%bd%e4%ba%94%e5%88%86%e4%b9%8b%e4%b8%80%e7%9a%84%e4%ba%ba%e5%8f%a3%e6%9d%a5%e8%ae%a1%e7%ae%97%ef%bc%8c%e8%bf%99%e4%b8%aa%e6%af%94%e4%be%8b%e4%bc%bc%e4%b9%8e%e4%b8%8d%e7%ae%97%e5%a4%aa%e9%ab%98%e3%80%82%0a%e4%bb%a5%e4%b8%8a%e8%bf%99%e4%ba%9b%e4%bf%a1%e6%81%af%ef%bc%8c%e5%87%ba%e4%ba%8e%e6%9f%90%e4%ba%9b%e5%8e%9f%e5%9b%a0%ef%bc%8c%e5%9c%a8%e4%b8%80%e8%88%ac%e7%9a%84%e6%96%b0%e9%97%bb%e4%b8%ad%e6%98%af%e5%be%88%e9%9a%be%e6%89%be%e5%88%b0%e7%9a%84%ef%bc%8c%e9%99%a4%e9%9d%9e%e6%98%af%e5%8d%8e%e7%9b%9b%e9%a1%bf%e9%82%ae%e6%8a%a5%e8%bf%99%e6%a0%b7%e7%9b%b8%e5%af%b9%e5%85%ac%e7%ab%8b%e7%9a%84%e5%aa%92%e4%bd%93%ef%bc%88%e5%8f%aa%e6%98%af%e7%9b%b8%e5%af%b9%ef%bc%89%e3%80%82%e5%8d%b3%e4%bd%bf%e5%8e%bb%e6%89%be%e6%8a%a5%e9%81%93%e4%b8%ad%e6%8f%b4%e5%bc%95%e7%9a%84%e6%95%b0%e6%8d%ae%e6%9d%a5%e6%ba%90%ef%bc%8c%e4%b9%9f%e5%8f%aa%e8%83%bd%e6%89%be%e5%88%b0%e4%b8%80%e5%ae%b6%e7%a7%81%e7%ab%8b%e7%9a%84%e7%a0%94%e7%a9%b6%e6%9c%ba%e6%9e%84%ef%bc%88%20Institute%20of%20International%20Finance%ef%bc%89%ef%bc%8c%e5%85%b6%e6%95%b0%e6%8d%ae%e5%b9%b6%e4%b8%8d%e5%af%b9%e5%a4%96%e5%bc%80%e6%94%be%e3%80%82IMF%e7%9a%84%20Global%20Debt%20Database%20%e6%98%af%e6%88%91%e8%83%bd%e6%89%be%e5%88%b0%e7%9a%84%e6%9c%80%e5%a5%bd%e7%9a%84%e6%9b%bf%e4%bb%a3%e5%93%81%ef%bc%8c%e4%bd%86%e6%98%af%e6%97%b6%e6%95%88%e6%80%a7%e5%b7%ae%e4%ba%86%e4%b8%8d%e5%b0%91%e3%80%82%e6%80%bb%e8%80%8c%e8%a8%80%e4%b9%8b%ef%bc%8c%e5%af%b9%e4%ba%8e%e4%b8%80%e4%b8%aa%e6%99%ae%e9%80%9a%e8%af%bb%e8%80%85%e6%9d%a5%e8%af%b4%ef%bc%8c%e6%83%b3%e8%a6%81%e7%9c%9f%e6%ad%a3%e5%8e%bb%e4%ba%86%e8%a7%a3%e8%87%aa%e5%b7%b1%e5%9b%bd%e5%ae%b6%e7%9a%84%e5%80%ba%e5%8a%a1%e7%8a%b6%e5%86%b5%ef%bc%8c%e5%b9%b6%e4%b8%8d%e6%98%af%e4%b8%80%e4%bb%b6%e5%ae%b9%e6%98%93%e7%9a%84%e4%ba%8b%e6%83%85%e3%80%82%0a7%e6%9c%8822%e6%97%a5%ef%bc%8c%e7%be%8e%e5%9b%bd%e4%bc%97%e8%ae%ae%e9%99%a2%e9%80%9a%e8%bf%87%e6%b3%95%e6%a1%88%ef%bc%8c%e5%9c%a8%e6%9c%aa%e6%9d%a5%e4%b8%a4%e5%b9%b4%e5%86%85%e6%89%b9%e5%87%86%e6%94%bf%e5%ba%9c%e6%af%8f%e5%b9%b4%e5%a2%9e%e5%8a%a0500%e4%ba%bf%e7%be%8e%e5%85%83%e7%9a%84%e6%94%af%e5%87%ba%e3%80%82%e7%9b%ae%e5%89%8d%e7%9a%84%e5%80%ba%e5%8a%a1%e6%9c%80%e9%ab%98%e9%99%90%e9%a2%9d%ef%bc%88debt%20ceilings%ef%bc%89%e4%b9%9f%e8%a2%ab%e6%9a%82%e7%bc%93%e4%ba%86%e3%80%82%e6%80%bb%e7%bb%9f%e5%92%8c%e5%9b%bd%e4%bc%9a%e5%8f%88%e9%83%bd%e5%8f%af%e4%bb%a5%e9%ab%98%e9%ab%98%e5%85%b4%e5%85%b4%e5%9c%b0%e8%8a%b1%e9%92%b1%e4%ba%86%ef%bc%8c%e5%8f%8d%e6%ad%a3%e5%80%ba%e5%8a%a1%e5%b7%b2%e7%bb%8f%e7%b4%af%e7%a7%af%e5%a6%82%e5%b1%b1%ef%bc%8c%e5%86%8d%e5%8a%a0%e4%b8%80%e7%82%b9%e4%b9%9f%e6%97%a0%e6%89%80%e8%b0%93%e3%80%82%0a%e4%b8%8d%e8%bf%87%ef%bc%8c%e6%af%95%e7%ab%9f%e5%80%ba%e5%90%84%e6%9c%89%e4%b8%bb%ef%bc%8c%e6%98%af%e5%80%ba%ef%bc%8c%e5%b0%b1%e8%bf%9f%e6%97%a9%e8%a6%81%e8%bf%98%e7%9a%84%e3%80%82%0a%e6%9b%b4%e5%a4%9a%e9%98%85%e8%af%bb%ef%bc%9a%0a%20Aaron%20Kuriloff%20on%20WSJ%20-%20Taking%20Stock%20of%20the%20World%e2%80%99s%20Debt%20%ef%bc%88%e8%af%95%e7%9d%80%e5%9c%a8%e5%9b%be%e4%ba%94%e6%89%be%e6%89%be%e7%be%8e%e5%9b%bd%e3%80%82%e6%8f%90%e7%a4%ba%ef%bc%9a%e6%89%be%e4%b8%8d%e5%88%b0%e7%9a%84%e3%80%82%ef%bc%89%20Elizabeth%20Warren%20on%20Medium-%20The%20Coming%20Economic%20Crash%20%e2%80%94%20And%20How%20to%20Stop%20It%20David%20Leonhardt%20on%20NYT%20-%20The%20Next%20Debt%20Bombs%20%20">
+      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fjiafeili.netlify.app%2fposts%2f2019-07-23-debt%2f&t=%e5%80%ba%e5%90%84%e6%9c%89%e4%b8%bb">
+      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;">
+          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;">
+          <i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;">
+          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');">
+          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+
+  <footer id="footer">
+  <div class="footer-left">
+    Copyright  &copy; 2020  Jiafei Li 
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+        <li><a href="/">Home</a></li>
+         
+        <li><a href="/posts">Posts</a></li>
+         
+        <li><a href="/others">Others</a></li>
+         
+        <li><a href="/about">About</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+  </div>
+</body>
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+</html>

@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> 开发日志[3]--文章键盘翻页 </title>
+  <meta name="description" content="Economist in the making. R user. Based in Chicago">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta property="og:title" content="开发日志[3]--文章键盘翻页" />
+<meta property="og:description" content="最近解决了一个问题：
+ 用键盘『←』『→』翻页到上一篇和下一篇文章  解决方案： 一开始是看了谢老大的这篇博客，找到了里面的提到的翻页代码：
+$(function(){ $(document).keydown(function(e) { var url = false; if (e.which == 37 || e.which == 74) { // Left arrow and J  {% if page.previous %} url = &#39;{{page.previous.url}}&#39;; {% endif %} } else if (e.which == 39 || e.which == 75) { // Right arrow and K  {% if page.next %} url = &#39;{{page.next.url}}&#39;; {% endif %} } if (url) { window.location = url; } }); }) 我一开始不太明白怎么在 html 里面加 javascipt，上网搜了一下，把上面这段代码用一个&lt;script language=&quot;Javascipt&quot;&gt;&lt;/script&gt; 包裹起来，然后粘贴到网站的默认页面（default." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jiafeili.netlify.app/others/2018-12-12-blog-dev-3/" />
+<meta property="article:published_time" content="2018-12-12T00:00:00+00:00" />
+<meta property="article:modified_time" content="2018-12-12T00:00:00+00:00" />
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="开发日志[3]--文章键盘翻页"/>
+<meta name="twitter:description" content="最近解决了一个问题：
+ 用键盘『←』『→』翻页到上一篇和下一篇文章  解决方案： 一开始是看了谢老大的这篇博客，找到了里面的提到的翻页代码：
+$(function(){ $(document).keydown(function(e) { var url = false; if (e.which == 37 || e.which == 74) { // Left arrow and J  {% if page.previous %} url = &#39;{{page.previous.url}}&#39;; {% endif %} } else if (e.which == 39 || e.which == 75) { // Right arrow and K  {% if page.next %} url = &#39;{{page.next.url}}&#39;; {% endif %} } if (url) { window.location = url; } }); }) 我一开始不太明白怎么在 html 里面加 javascipt，上网搜了一下，把上面这段代码用一个&lt;script language=&quot;Javascipt&quot;&gt;&lt;/script&gt; 包裹起来，然后粘贴到网站的默认页面（default."/>
+
+  
+  
+    
+  
+  
+  <link rel="stylesheet" href="https://jiafeili.netlify.app/css/style-classic.css">
+  
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+<link rel="icon" type="image/png" href="https://jiafeili.netlify.app/images/favicon.ico" />
+
+  
+  
+  
+</head>
+<body class="max-width mx-auto px3 ltr">
+  <div class="content index py4">
+
+  <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+        <li><a href="/">Home</a></li>
+         
+        <li><a href="/posts">Posts</a></li>
+         
+        <li><a href="/others">Others</a></li>
+         
+        <li><a href="/about">About</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li>
+          <a class="icon" href=" https://jiafeili.netlify.app/others/2018-12-10-blog-dev-2/">
+            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a class="icon" href="https://jiafeili.netlify.app/others/2018-12-22-calendar/">
+            <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i>
+          </a>
+        </li>
+        
+        <li>
+          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');">
+            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#">
+            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fjiafeili.netlify.app%2fothers%2f2018-12-12-blog-dev-3%2f">
+      <i class="fab fa-facebook " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fjiafeili.netlify.app%2fothers%2f2018-12-12-blog-dev-3%2f&text=%e5%bc%80%e5%8f%91%e6%97%a5%e5%bf%97%5b3%5d--%e6%96%87%e7%ab%a0%e9%94%ae%e7%9b%98%e7%bf%bb%e9%a1%b5">
+      <i class="fab fa-twitter " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fjiafeili.netlify.app%2fothers%2f2018-12-12-blog-dev-3%2f&title=%e5%bc%80%e5%8f%91%e6%97%a5%e5%bf%97%5b3%5d--%e6%96%87%e7%ab%a0%e9%94%ae%e7%9b%98%e7%bf%bb%e9%a1%b5">
+      <i class="fab fa-linkedin " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fjiafeili.netlify.app%2fothers%2f2018-12-12-blog-dev-3%2f&is_video=false&description=%e5%bc%80%e5%8f%91%e6%97%a5%e5%bf%97%5b3%5d--%e6%96%87%e7%ab%a0%e9%94%ae%e7%9b%98%e7%bf%bb%e9%a1%b5">
+      <i class="fab fa-pinterest " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=%e5%bc%80%e5%8f%91%e6%97%a5%e5%bf%97%5b3%5d--%e6%96%87%e7%ab%a0%e9%94%ae%e7%9b%98%e7%bf%bb%e9%a1%b5&body=Check out this article: https%3a%2f%2fjiafeili.netlify.app%2fothers%2f2018-12-12-blog-dev-3%2f">
+      <i class="fas fa-envelope " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fjiafeili.netlify.app%2fothers%2f2018-12-12-blog-dev-3%2f&title=%e5%bc%80%e5%8f%91%e6%97%a5%e5%bf%97%5b3%5d--%e6%96%87%e7%ab%a0%e9%94%ae%e7%9b%98%e7%bf%bb%e9%a1%b5">
+      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fjiafeili.netlify.app%2fothers%2f2018-12-12-blog-dev-3%2f&title=%e5%bc%80%e5%8f%91%e6%97%a5%e5%bf%97%5b3%5d--%e6%96%87%e7%ab%a0%e9%94%ae%e7%9b%98%e7%bf%bb%e9%a1%b5">
+      <i class="fab fa-reddit " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2fjiafeili.netlify.app%2fothers%2f2018-12-12-blog-dev-3%2f&title=%e5%bc%80%e5%8f%91%e6%97%a5%e5%bf%97%5b3%5d--%e6%96%87%e7%ab%a0%e9%94%ae%e7%9b%98%e7%bf%bb%e9%a1%b5">
+      <i class="fab fa-stumbleupon " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://digg.com/submit?url=https%3a%2f%2fjiafeili.netlify.app%2fothers%2f2018-12-12-blog-dev-3%2f&title=%e5%bc%80%e5%8f%91%e6%97%a5%e5%bf%97%5b3%5d--%e6%96%87%e7%ab%a0%e9%94%ae%e7%9b%98%e7%bf%bb%e9%a1%b5">
+      <i class="fab fa-digg " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fjiafeili.netlify.app%2fothers%2f2018-12-12-blog-dev-3%2f&name=%e5%bc%80%e5%8f%91%e6%97%a5%e5%bf%97%5b3%5d--%e6%96%87%e7%ab%a0%e9%94%ae%e7%9b%98%e7%bf%bb%e9%a1%b5&description=%e6%9c%80%e8%bf%91%e8%a7%a3%e5%86%b3%e4%ba%86%e4%b8%80%e4%b8%aa%e9%97%ae%e9%a2%98%ef%bc%9a%0a%20%e7%94%a8%e9%94%ae%e7%9b%98%e3%80%8e%e2%86%90%e3%80%8f%e3%80%8e%e2%86%92%e3%80%8f%e7%bf%bb%e9%a1%b5%e5%88%b0%e4%b8%8a%e4%b8%80%e7%af%87%e5%92%8c%e4%b8%8b%e4%b8%80%e7%af%87%e6%96%87%e7%ab%a0%20%20%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88%ef%bc%9a%20%e4%b8%80%e5%bc%80%e5%a7%8b%e6%98%af%e7%9c%8b%e4%ba%86%e8%b0%a2%e8%80%81%e5%a4%a7%e7%9a%84%e8%bf%99%e7%af%87%e5%8d%9a%e5%ae%a2%ef%bc%8c%e6%89%be%e5%88%b0%e4%ba%86%e9%87%8c%e9%9d%a2%e7%9a%84%e6%8f%90%e5%88%b0%e7%9a%84%e7%bf%bb%e9%a1%b5%e4%bb%a3%e7%a0%81%ef%bc%9a%0a%24%28function%28%29%7b%20%24%28document%29.keydown%28function%28e%29%20%7b%20var%20url%20%3d%20false%3b%20if%20%28e.which%20%3d%3d%2037%20%7c%7c%20e.which%20%3d%3d%2074%29%20%7b%20%2f%2f%20Left%20arrow%20and%20J%20%20%7b%25%20if%20page.previous%20%25%7d%20url%20%3d%20%26%2339%3b%7b%7bpage.previous.url%7d%7d%26%2339%3b%3b%20%7b%25%20endif%20%25%7d%20%7d%20else%20if%20%28e.which%20%3d%3d%2039%20%7c%7c%20e.which%20%3d%3d%2075%29%20%7b%20%2f%2f%20Right%20arrow%20and%20K%20%20%7b%25%20if%20page.next%20%25%7d%20url%20%3d%20%26%2339%3b%7b%7bpage.next.url%7d%7d%26%2339%3b%3b%20%7b%25%20endif%20%25%7d%20%7d%20if%20%28url%29%20%7b%20window.location%20%3d%20url%3b%20%7d%20%7d%29%3b%20%7d%29%20%e6%88%91%e4%b8%80%e5%bc%80%e5%a7%8b%e4%b8%8d%e5%a4%aa%e6%98%8e%e7%99%bd%e6%80%8e%e4%b9%88%e5%9c%a8%20html%20%e9%87%8c%e9%9d%a2%e5%8a%a0%20javascipt%ef%bc%8c%e4%b8%8a%e7%bd%91%e6%90%9c%e4%ba%86%e4%b8%80%e4%b8%8b%ef%bc%8c%e6%8a%8a%e4%b8%8a%e9%9d%a2%e8%bf%99%e6%ae%b5%e4%bb%a3%e7%a0%81%e7%94%a8%e4%b8%80%e4%b8%aa%26lt%3bscript%20language%3d%26quot%3bJavascipt%26quot%3b%26gt%3b%26lt%3b%2fscript%26gt%3b%20%e5%8c%85%e8%a3%b9%e8%b5%b7%e6%9d%a5%ef%bc%8c%e7%84%b6%e5%90%8e%e7%b2%98%e8%b4%b4%e5%88%b0%e7%bd%91%e7%ab%99%e7%9a%84%e9%bb%98%e8%ae%a4%e9%a1%b5%e9%9d%a2%ef%bc%88default.">
+      <i class="fab fa-tumblr " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fjiafeili.netlify.app%2fothers%2f2018-12-12-blog-dev-3%2f&t=%e5%bc%80%e5%8f%91%e6%97%a5%e5%bf%97%5b3%5d--%e6%96%87%e7%ab%a0%e9%94%ae%e7%9b%98%e7%bf%bb%e9%a1%b5">
+      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#解决方案">解决方案：</a></li>
+            <li><a href="#感想">感想：</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+  </span>
+</div>
+
+
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <h1 class="posttitle" itemprop="name headline">
+        开发日志[3]--文章键盘翻页
+      </h1>
+      <div class="meta">
+        
+        <div class="postdate">
+          
+          <time datetime="2018-12-12 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-12-12</time>
+          
+        </div>
+        
+        
+        <div class="article-tag">
+            <i class="fas fa-tag"></i>
+            
+            
+            <a class="tag-link" href="/tags/blog-development" rel="tag">blog-development</a>
+            
+        </div>
+        
+      </div>
+    </header>
+
+  
+    <div class="content" itemprop="articleBody">
+      <p>最近解决了一个问题：</p>
+<ul>
+<li>用键盘『←』『→』翻页到上一篇和下一篇文章</li>
+</ul>
+<!-- raw HTML omitted -->
+<h4 id="解决方案">解决方案：</h4>
+<p>一开始是看了谢老大的<a href="https://yihui.name/cn/2012/02/hello-jekyll/">这篇博客</a>，找到了里面的提到的<a href="http://ztpala.com/2012/01/16/jquery-keyboard-navigation/">翻页代码</a>：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">$</span>(<span style="color:#66d9ef">function</span>(){
+  <span style="color:#a6e22e">$</span>(document).<span style="color:#a6e22e">keydown</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">e</span>) {
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">url</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
+        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">which</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">37</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">which</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">74</span>) {  <span style="color:#75715e">// Left arrow and J
+</span><span style="color:#75715e"></span>            {<span style="color:#f92672">%</span> <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">previous</span> <span style="color:#f92672">%</span>}
+        <span style="color:#a6e22e">url</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;{{page.previous.url}}&#39;</span>;
+        {<span style="color:#f92672">%</span> <span style="color:#a6e22e">endif</span> <span style="color:#f92672">%</span>}
+        }
+        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">which</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">39</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">which</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">75</span>) {  <span style="color:#75715e">// Right arrow and K
+</span><span style="color:#75715e"></span>            {<span style="color:#f92672">%</span> <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">next</span> <span style="color:#f92672">%</span>}
+        <span style="color:#a6e22e">url</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;{{page.next.url}}&#39;</span>;
+        {<span style="color:#f92672">%</span> <span style="color:#a6e22e">endif</span> <span style="color:#f92672">%</span>}
+        }
+        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">url</span>) {
+            window.<span style="color:#a6e22e">location</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">url</span>;
+        }
+  });
+})
+</code></pre></div><p>我一开始不太明白怎么在 html 里面加 javascipt，上网搜了一下，把上面这段代码用一个<code>&lt;script language=&quot;Javascipt&quot;&gt;&lt;/script&gt;</code> 包裹起来，然后粘贴到网站的默认页面（default.html）里头。从本地试了一下，好像不管用。</p>
+<p>于是就给谢老大在博客后面留言，没想到七年前的博客，马上就收到<a href="http://disq.us/p/1y0qyhw">回复</a>了（感谢Disqus）：</p>
+<!-- raw HTML omitted -->
+<p>我没用过Hugo，不过还是看一下代码：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span><span style="color:#f92672">&gt;</span>
+document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;keyup&#39;</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">e</span>) {
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">nodeName</span>.<span style="color:#a6e22e">toUpperCase</span>() <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#39;BODY&#39;</span>) <span style="color:#66d9ef">return</span>;
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">url</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">which</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">37</span>) {  <span style="color:#75715e">// Left arrow
+</span><span style="color:#75715e"></span>    {{ <span style="color:#66d9ef">if</span> .<span style="color:#a6e22e">PrevInSection</span> }}
+    <span style="color:#a6e22e">url</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;{{ .PrevInSection.RelPermalink }}&#39;</span>;
+    {{ <span style="color:#a6e22e">end</span> }}
+  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">which</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">39</span>) {  <span style="color:#75715e">// Right arrow
+</span><span style="color:#75715e"></span>    {{ <span style="color:#66d9ef">if</span> .<span style="color:#a6e22e">NextInSection</span> }}
+    <span style="color:#a6e22e">url</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;{{ .NextInSection.RelPermalink }}&#39;</span>;
+    {{ <span style="color:#a6e22e">end</span> }}
+  }
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">url</span>) window.<span style="color:#a6e22e">location</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">url</span>;
+});
+<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/script&gt;</span>
+</code></pre></div><p>和 Jekyll 有点像，改了改页面变量，如下：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span><span style="color:#f92672">&gt;</span>
+document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;keyup&#39;</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">e</span>) {
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">nodeName</span>.<span style="color:#a6e22e">toUpperCase</span>() <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#39;BODY&#39;</span>) <span style="color:#66d9ef">return</span>;
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">url</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">which</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">37</span>) {  <span style="color:#75715e">// Left arrow
+</span><span style="color:#75715e"></span>    {<span style="color:#f92672">%</span> <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">previous</span> <span style="color:#f92672">%</span>}
+    <span style="color:#a6e22e">url</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;{{page.previous.url}}&#39;</span>;
+    {<span style="color:#f92672">%</span> <span style="color:#a6e22e">endif</span> <span style="color:#f92672">%</span>}
+  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">which</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">39</span>) {  <span style="color:#75715e">// Right arrow
+</span><span style="color:#75715e"></span>    {<span style="color:#f92672">%</span> <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">next</span> <span style="color:#f92672">%</span>}
+    <span style="color:#a6e22e">url</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;{{page.next.url}}&#39;</span>;
+    {<span style="color:#f92672">%</span> <span style="color:#a6e22e">endif</span> <span style="color:#f92672">%</span>}
+  }
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">url</span>) window.<span style="color:#a6e22e">location</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">url</span>;
+});
+<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/script&gt;</span>
+</code></pre></div><p>把这个文件保存在网站的<code>_includes/</code>文件夹里，起了个名字叫<code>arrow.html</code>（需要的话，链接<a href="https://github.com/jiafeili/jiafeili.github.io/blob/master/_includes/arrow.html">在此</a>）。</p>
+<p>最后，在<code>_layouts/default.html</code> 的<code>footer</code> 里面加了一行：</p>
+<pre><code>{% include arrow.html %}
+</code></pre><p>就大功告成了。</p>
+<h4 id="感想">感想：</h4>
+<p>功能实现了以后，我在前文提到的<a href="https://yihui.name/cn/2012/02/hello-jekyll/">这篇博客</a>下面冒了个泡表示感谢。结果被<a href="https://yihui.name/">谢益辉</a>同志一把揪住，让我详细说说实现的过程：</p>
+<!-- raw HTML omitted -->
+<p>于是就有了这篇日志。</p>
+<p>不过有一些问题我还没有完全搞明白，比如之前试的代码为啥不好用。我的猜测是那个<code>&lt;script language=&quot;Javascript&quot;&gt;</code> 搞的鬼。根据<a href="https://stackoverflow.com/questions/15975786/language-javascript-vs-type-text-javascript">这个问题</a>的回答，好像<code>language</code>这个选项已经被弃用了。</p>
+<p>还有就是下面这段代码是干嘛的，这个有空可以研究一下。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;keyup&#39;</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">e</span>) {
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">nodeName</span>.<span style="color:#a6e22e">toUpperCase</span>() <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#39;BODY&#39;</span>) <span style="color:#66d9ef">return</span>;
+</code></pre></div><p>下一步的目标是把『文章』和『开发日志』的键盘翻页分开处理，这样读者就不会看文章翻着翻着就到开发日志了，感觉比较无聊。此外就是归档页的归纳整理，感觉现在这个样子还是比较乱。但是如果索性去掉这页，我又觉得检索文章不太方便。还是先纠结一会儿吧。</p>
+<p>以后的『开发日志』（包括此篇）我都会加上评论区，欢迎各位留言，一起交流。</p>
+
+    </div>
+  </article>
+
+  <script type="text/javascript">
+document.addEventListener('keyup', function(e) {
+  if (e.target.nodeName.toUpperCase() != 'BODY') return;
+  var url = false;
+  if (e.which == 37) {  
+    
+    url = '\/others\/2018-12-10-blog-dev-2\/';
+    
+  } else if (e.which == 39) {  
+    
+    url = '\/others\/2018-12-22-calendar\/';
+    
+  }
+  if (url) window.location = url;
+});
+</script>
+
+  
+  
+  
+
+
+
+
+  
+    <div class="blog-post-comments">
+      <div id="disqus_thread"></div>
+      <script>
+
+      
+
+      
+
+      (function() { 
+      var d = document, s = d.createElement('script');
+      s.src = 'https://jiafeili-github.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>                
+    </div>
+
+  
+
+
+
+  <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/posts">Posts</a></li>
+         
+          <li><a href="/others">Others</a></li>
+         
+          <li><a href="/about">About</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#解决方案">解决方案：</a></li>
+            <li><a href="#感想">感想：</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fjiafeili.netlify.app%2fothers%2f2018-12-12-blog-dev-3%2f">
+      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fjiafeili.netlify.app%2fothers%2f2018-12-12-blog-dev-3%2f&text=%e5%bc%80%e5%8f%91%e6%97%a5%e5%bf%97%5b3%5d--%e6%96%87%e7%ab%a0%e9%94%ae%e7%9b%98%e7%bf%bb%e9%a1%b5">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fjiafeili.netlify.app%2fothers%2f2018-12-12-blog-dev-3%2f&title=%e5%bc%80%e5%8f%91%e6%97%a5%e5%bf%97%5b3%5d--%e6%96%87%e7%ab%a0%e9%94%ae%e7%9b%98%e7%bf%bb%e9%a1%b5">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fjiafeili.netlify.app%2fothers%2f2018-12-12-blog-dev-3%2f&is_video=false&description=%e5%bc%80%e5%8f%91%e6%97%a5%e5%bf%97%5b3%5d--%e6%96%87%e7%ab%a0%e9%94%ae%e7%9b%98%e7%bf%bb%e9%a1%b5">
+      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=%e5%bc%80%e5%8f%91%e6%97%a5%e5%bf%97%5b3%5d--%e6%96%87%e7%ab%a0%e9%94%ae%e7%9b%98%e7%bf%bb%e9%a1%b5&body=Check out this article: https%3a%2f%2fjiafeili.netlify.app%2fothers%2f2018-12-12-blog-dev-3%2f">
+      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fjiafeili.netlify.app%2fothers%2f2018-12-12-blog-dev-3%2f&title=%e5%bc%80%e5%8f%91%e6%97%a5%e5%bf%97%5b3%5d--%e6%96%87%e7%ab%a0%e9%94%ae%e7%9b%98%e7%bf%bb%e9%a1%b5">
+      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fjiafeili.netlify.app%2fothers%2f2018-12-12-blog-dev-3%2f&title=%e5%bc%80%e5%8f%91%e6%97%a5%e5%bf%97%5b3%5d--%e6%96%87%e7%ab%a0%e9%94%ae%e7%9b%98%e7%bf%bb%e9%a1%b5">
+      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2fjiafeili.netlify.app%2fothers%2f2018-12-12-blog-dev-3%2f&title=%e5%bc%80%e5%8f%91%e6%97%a5%e5%bf%97%5b3%5d--%e6%96%87%e7%ab%a0%e9%94%ae%e7%9b%98%e7%bf%bb%e9%a1%b5">
+      <i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://digg.com/submit?url=https%3a%2f%2fjiafeili.netlify.app%2fothers%2f2018-12-12-blog-dev-3%2f&title=%e5%bc%80%e5%8f%91%e6%97%a5%e5%bf%97%5b3%5d--%e6%96%87%e7%ab%a0%e9%94%ae%e7%9b%98%e7%bf%bb%e9%a1%b5">
+      <i class="fab fa-digg fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fjiafeili.netlify.app%2fothers%2f2018-12-12-blog-dev-3%2f&name=%e5%bc%80%e5%8f%91%e6%97%a5%e5%bf%97%5b3%5d--%e6%96%87%e7%ab%a0%e9%94%ae%e7%9b%98%e7%bf%bb%e9%a1%b5&description=%e6%9c%80%e8%bf%91%e8%a7%a3%e5%86%b3%e4%ba%86%e4%b8%80%e4%b8%aa%e9%97%ae%e9%a2%98%ef%bc%9a%0a%20%e7%94%a8%e9%94%ae%e7%9b%98%e3%80%8e%e2%86%90%e3%80%8f%e3%80%8e%e2%86%92%e3%80%8f%e7%bf%bb%e9%a1%b5%e5%88%b0%e4%b8%8a%e4%b8%80%e7%af%87%e5%92%8c%e4%b8%8b%e4%b8%80%e7%af%87%e6%96%87%e7%ab%a0%20%20%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88%ef%bc%9a%20%e4%b8%80%e5%bc%80%e5%a7%8b%e6%98%af%e7%9c%8b%e4%ba%86%e8%b0%a2%e8%80%81%e5%a4%a7%e7%9a%84%e8%bf%99%e7%af%87%e5%8d%9a%e5%ae%a2%ef%bc%8c%e6%89%be%e5%88%b0%e4%ba%86%e9%87%8c%e9%9d%a2%e7%9a%84%e6%8f%90%e5%88%b0%e7%9a%84%e7%bf%bb%e9%a1%b5%e4%bb%a3%e7%a0%81%ef%bc%9a%0a%24%28function%28%29%7b%20%24%28document%29.keydown%28function%28e%29%20%7b%20var%20url%20%3d%20false%3b%20if%20%28e.which%20%3d%3d%2037%20%7c%7c%20e.which%20%3d%3d%2074%29%20%7b%20%2f%2f%20Left%20arrow%20and%20J%20%20%7b%25%20if%20page.previous%20%25%7d%20url%20%3d%20%26%2339%3b%7b%7bpage.previous.url%7d%7d%26%2339%3b%3b%20%7b%25%20endif%20%25%7d%20%7d%20else%20if%20%28e.which%20%3d%3d%2039%20%7c%7c%20e.which%20%3d%3d%2075%29%20%7b%20%2f%2f%20Right%20arrow%20and%20K%20%20%7b%25%20if%20page.next%20%25%7d%20url%20%3d%20%26%2339%3b%7b%7bpage.next.url%7d%7d%26%2339%3b%3b%20%7b%25%20endif%20%25%7d%20%7d%20if%20%28url%29%20%7b%20window.location%20%3d%20url%3b%20%7d%20%7d%29%3b%20%7d%29%20%e6%88%91%e4%b8%80%e5%bc%80%e5%a7%8b%e4%b8%8d%e5%a4%aa%e6%98%8e%e7%99%bd%e6%80%8e%e4%b9%88%e5%9c%a8%20html%20%e9%87%8c%e9%9d%a2%e5%8a%a0%20javascipt%ef%bc%8c%e4%b8%8a%e7%bd%91%e6%90%9c%e4%ba%86%e4%b8%80%e4%b8%8b%ef%bc%8c%e6%8a%8a%e4%b8%8a%e9%9d%a2%e8%bf%99%e6%ae%b5%e4%bb%a3%e7%a0%81%e7%94%a8%e4%b8%80%e4%b8%aa%26lt%3bscript%20language%3d%26quot%3bJavascipt%26quot%3b%26gt%3b%26lt%3b%2fscript%26gt%3b%20%e5%8c%85%e8%a3%b9%e8%b5%b7%e6%9d%a5%ef%bc%8c%e7%84%b6%e5%90%8e%e7%b2%98%e8%b4%b4%e5%88%b0%e7%bd%91%e7%ab%99%e7%9a%84%e9%bb%98%e8%ae%a4%e9%a1%b5%e9%9d%a2%ef%bc%88default.">
+      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fjiafeili.netlify.app%2fothers%2f2018-12-12-blog-dev-3%2f&t=%e5%bc%80%e5%8f%91%e6%97%a5%e5%bf%97%5b3%5d--%e6%96%87%e7%ab%a0%e9%94%ae%e7%9b%98%e7%bf%bb%e9%a1%b5">
+      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;">
+          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;">
+          <i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;">
+          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');">
+          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+
+  <footer id="footer">
+  <div class="footer-left">
+    Copyright  &copy; 2020  Jiafei Li 
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+        <li><a href="/">Home</a></li>
+         
+        <li><a href="/posts">Posts</a></li>
+         
+        <li><a href="/others">Others</a></li>
+         
+        <li><a href="/about">About</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+  </div>
+</body>
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+</html>

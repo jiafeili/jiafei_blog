@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Others on Jiafei Li</title>
+    <link>https://jiafeili.netlify.app/others/</link>
+    <description>Recent content in Others on Jiafei Li</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 29 Jul 2020 15:38:04 -0500</lastBuildDate>
+    
+	<atom:link href="https://jiafeili.netlify.app/others/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>开发日志[4]--用 Hugo &#43; Netlify 重新建站</title>
+      <link>https://jiafeili.netlify.app/others/2020-07-29-blog-dev-4/</link>
+      <pubDate>Wed, 29 Jul 2020 15:38:04 -0500</pubDate>
+      
+      <guid>https://jiafeili.netlify.app/others/2020-07-29-blog-dev-4/</guid>
+      <description>网站开了几年了，没写几篇文章，论原因的话忙和懒各占一半。最近腾出点时间，把网站用Hugo重新搭了一下，转到了Netlify上面。这么做也没啥特别的理由，主要是原来的网页设计有点看腻了。这个过程我一开始以为会很简单，不过还是多少折腾了一会儿。
+首先当然就是把文章转移出来。这个我用的是自带的hugo import jekyll，没什么问题。
+接下来，我用最快的方法建了个新站，然后很单纯地把所有内容复制到原来Github Pages那个文件夹，以为这样就搞定了。后来看网站怎么也刷不出来，才去查了一下 —— 原来 Github Pages 使用的是 Jekyll，换 Hugo 的话接着用GP比较麻烦，大家都建议用 Netlify。唉，怎么不早说，早说我就不换了。不过事已至此了，还是赶紧继续吧。
+Netlify 可以直接从Github repo里面同步，特别方便。唯一问题是原来github.io的后缀不能用了，我也没买域名，就用了自带的netlify.app，基本是出于薅羊毛的心态。这过程就开始出现问题了，一开始 Netlify deploy 不出来网页，总是各种报错，后来创建了个netlify.toml文件，里面把 Hugo version 改了一下：
+[context.production.environment] HUGO_VERSION = &amp;#34;0.74.0&amp;#34; 这样改完网站倒是出来了，但是没有CSS，主题好像不能加载。不知道问题是啥，网上也是众说纷纭，主流的说法是因为下载主题的时候应该用git submodule 而不是 git clone ，否则Netlify不能兼容。但是我依样画葫芦试了半天也不行。心情非常烦躁。
+最后我发现是低级错误：baseURL 那里我https://写成了http:// —— 无语，没想到输在了这里。改完以后就可以看到排版了。
+我的模板是从这个 仙人掌 改的，把blockquote部分弄得正常了一点，尤其是把那个不符合我审美的绿色给改了。说到这不得不吐槽一句，为什么好多模板都把blockquote写得这么夸张，好像引的都是什么名言佳句一样，还要单独用超大的字体，超居中的排版，明晃晃的引号或者什么别的图案，显示出这句话的与众不同 —— 而大多数时候，我们引用什么，不都是为了佐证我们自己要说的话吗？
+当然这个设计我还是不太满意。一是那个网页Logo还没换，用的还是原来主题自带的仙人掌；二是文章页标题和Tag离得太近，加点空间比较好；最后就是如果一篇文章有超过三个标签（tags），那么从第三个开始，所有的标签都会变成用逗号隔开，而不是像前两个一样用空格隔开。都是一些零星的小问题，等有工夫的时候慢慢解决。
+最后当然还有一些小工作，比如把文章分类， 把Disqus讨论区放进来，等等。有个事我没搞明白，就是怎么把原来网站的评论引到现在的网站。我试了Disqus自带的“url-mapping”，上传了一个csv上去。一会儿Disqus邮件告诉我传输完毕了，但是评论就是死活不挪窝，让人非常郁闷。虽然原来的网站也没几条评论，不过还是能转过来最好 —— 这个有待继续研究。
+差点忘了，还有回头得加一个文件，能够允许用户用键盘翻页，这个在上一篇开发日志里有具体的教程。</description>
+    </item>
+    
+    <item>
+      <title>Calcurse--终端上的日程表管理工具</title>
+      <link>https://jiafeili.netlify.app/others/2018-12-22-calendar/</link>
+      <pubDate>Sat, 22 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jiafeili.netlify.app/others/2018-12-22-calendar/</guid>
+      <description>我一般用 Google Calendar 做日程表管理。主要原因有两个：一个是跨平台同步比较方便；另一个是相比其他软件来说（比如苹果上的iCal）更加轻便快捷。去年从iPhone 换到了 Pixel 以后，在移动端也可以更方便地编辑日程表了，感觉非常开心。
+不过我其实一直在找一个在终端上的日程表管理工具，这样我在写代码的时候，如果需要看一下今天的计划，就不用切换到浏览器或者手机上了，不容易分心。今天有空认真找了一下，终于搞定了，在这里写篇日志分享一下。不知道有没有人和我一样，有这种奇特的需求。
+这个工具其实一直都有，叫做Calcurse。不知道为什么，它的界面对我来说有一种谜之美感：
+安装 Calcurse 本身的安装非常简单，按照下面几步：
+ 从官网上下载安装包。 解压缩安装包  Mac 的话，直接双击解压缩就好 Linux 先定位到下载目录，然后运行下面这些代码就可以了 $ tar zxvf calcurse-4.3.0.tar.gz $ cd calcurse-4.3.0 $ ./configure $ make $ make install    之后在终端输入calcurse 就可以进入到日程表了。  关于 calcurse 的更多指令，可以参考它的帮助文档。这里不多赘述。总而言之，我觉得它的使用界面还是非常友好的，只是快捷键有点多，需要记一下。熟悉了以后就会感觉顺手了。
+同步Google Calendar 稍微麻烦一点的是如何把 Google Calendar 上面的日程表条目同步到 calcurse。最新的 calcurse 版本（4.3.0）已经支持了这个功能。不过设置起来还是有点费事的。
+ 首先，如果没有 python 3 的话，安装一下。然后还需要安装 httplib2:  pip3 install --user httplib2   我们需要去 Google Developer Console 创建一个新的项目（Project）。我给它命名为&amp;quot;Calcurse&amp;rdquo;，不过实际上叫什么都好。</description>
+    </item>
+    
+    <item>
+      <title>开发日志[3]--文章键盘翻页</title>
+      <link>https://jiafeili.netlify.app/others/2018-12-12-blog-dev-3/</link>
+      <pubDate>Wed, 12 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jiafeili.netlify.app/others/2018-12-12-blog-dev-3/</guid>
+      <description>最近解决了一个问题：
+ 用键盘『←』『→』翻页到上一篇和下一篇文章  解决方案： 一开始是看了谢老大的这篇博客，找到了里面的提到的翻页代码：
+$(function(){ $(document).keydown(function(e) { var url = false; if (e.which == 37 || e.which == 74) { // Left arrow and J  {% if page.previous %} url = &amp;#39;{{page.previous.url}}&amp;#39;; {% endif %} } else if (e.which == 39 || e.which == 75) { // Right arrow and K  {% if page.next %} url = &amp;#39;{{page.next.url}}&amp;#39;; {% endif %} } if (url) { window.location = url; } }); }) 我一开始不太明白怎么在 html 里面加 javascipt，上网搜了一下，把上面这段代码用一个&amp;lt;script language=&amp;quot;Javascipt&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; 包裹起来，然后粘贴到网站的默认页面（default.</description>
+    </item>
+    
+    <item>
+      <title>开发日志[2]--文章导航，归档分类</title>
+      <link>https://jiafeili.netlify.app/others/2018-12-10-blog-dev-2/</link>
+      <pubDate>Mon, 10 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jiafeili.netlify.app/others/2018-12-10-blog-dev-2/</guid>
+      <description>刚才解决了两个小问题：
+ 在文章界面，没有办法轻松地导航到下一篇和上一篇； 在归档界面，文章和开发日志混在一起，不方便阅读  解决方案如下：  目前的模板里面其实是支持文章前后导航的，不过因为一行无关的if语句，之前没有实现出来。现在已经修复了，所有文章下方都可以用鼠标导航到前面或者后面一篇了。下一步的目标是做到用键盘的←→箭头实现文章的导航。 可以参考谢老大的这篇博客。此外我希望文章和开发日志的箭头导航是分离的，这个可能就比较难一点，因为用page.previous或者page.next 就没有办法直接链接到上一篇文章了。这个还要再想一下。 在归档界面已经分开了文章和开发日志。  其他问题： Tags page 目前看上去还是比较乱，但可能这是目前配置下能找到的最简洁的解决方案。Github pages不支持外置的插件，这样一来就很难针对每个标签生成文章分类页面。这篇文章介绍了一种方案，不过需要每次推送github之前都运行一次python代码，感觉比较繁琐。我还在思考一个比较好的方式去整理所有的文章标签。</description>
+    </item>
+    
+    <item>
+      <title>开发日志[1]--Disqus, Google Analytics, Tag Fitering</title>
+      <link>https://jiafeili.netlify.app/others/2018-12-09-blog-dev-1/</link>
+      <pubDate>Sun, 09 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jiafeili.netlify.app/others/2018-12-09-blog-dev-1/</guid>
+      <description>随着博客访问量的增加，有两个问题有待解决。
+ 没有评论功能 没有办法统计访客和阅读量  解决方案如下：  评论功能现在已经开启，由Disqus支持。所有的博客下方都可留言，不过需要通过Facebook/Twitter/Google账号登陆以后才可发表。实现的途径很简单，参考了这篇博客。 本来Github自己是可以统计访问量的，但是工具比较粗陋，也没有办法进行用户分析。我参考了这篇博客，整合了Google Analytics，来统计博客的访问量。  其他问题： 我不希望『开发日志』和其他的博客一样，可以出现在首页，所以单独创立了一个 jekyll layout，叫做『dev』，单独放所有的此类日志。以后在博客的归档页面当中，希望也能够分类把博客和日志区分开。这个功能应该不难实现，下次再研究。</description>
+    </item>
+    
+  </channel>
+</rss>

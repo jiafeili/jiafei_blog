@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>writing on Jiafei Li</title>
+    <link>https://jiafeili.netlify.app/tags/writing/</link>
+    <description>Recent content in writing on Jiafei Li</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 12 Apr 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jiafeili.netlify.app/tags/writing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>最危险的写作工具</title>
+      <link>https://jiafeili.netlify.app/posts/2020-04-12-dangerousapp/</link>
+      <pubDate>Sun, 12 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jiafeili.netlify.app/posts/2020-04-12-dangerousapp/</guid>
+      <description>最近发现了一个写作网站，简直是帮助写文章的利器。这个网站的名字取得非常贴切，叫做“the most dangerous writing app”，翻译过来也就是“最危险的写作工具”。
+它的运作机制是这样的：提前设定好一段写作时长（比如10分钟），然后这个网站就会提供一个文档编辑器让你在上面开始写作，但是一旦5秒钟之内没有打字，网站就会把之前写的所有东西全部删除，而且没法恢复。这个机制就像一个定时启动的炸弹，让人神经紧张，但却也非常锻炼人的专注力，以及遣词造句的能力。我一开始用这个网站的时候，就经常因为纠结用哪个词、哪个字，险些让自己写的东西付之东流；到后面慢慢适应了，这样的烦恼倒也少了很多。当然不便之处还是有的，比如说打错字修改的时间，或者说想切换听的歌的时间，经常一不小心就逼近5秒，让人后背一阵发凉。说是“最危险的”写作工具，确实名不虚传。当然，帮人提高写作效率，倒也是真的。
+我不知道是不是每个人都是这样，不过对于我来说，有时候想写篇文章缓解一下近来的压力，但总是因为过度字斟句酌，最后把本该解压的写作活动变成让人压力更大的工作。这就好像平常生活中，有时候人总会过度地去计较自己的得失成败，可是这种态度或许会让人活得更累。倒不如“莫听穿林打叶声，何妨吟啸且徐行”——即使有时，那些“穿林打叶声”其实是自己的内心发出的。
+注：以上的文字是我在“危险写作网”上用10分钟写出来的。稍加润色，就可以直接发在这里了。</description>
+    </item>
+    
+  </channel>
+</rss>
