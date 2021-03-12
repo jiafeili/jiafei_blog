@@ -1,6 +1,6 @@
 ---
 comments: true
-title: "散户的胜利？资本说：别高兴的太早"
+title: "散户的胜利？"
 tags:
 - thoughts
 date: 2021-01-31T15:09:40-06:00
